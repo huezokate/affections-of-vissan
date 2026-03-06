@@ -188,9 +188,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .dlg-who.narrator{color:#CAE4FF;}
 .dlg-who.player{color:#A8C5DA;}
 .dlg-who.villain{color:rgba(200,80,80,.75);}
-.dlg-text{font-size:1rem;line-height:1.72;color:rgba(245,236,208,.82);}
-.dlg-text.it{font-style:italic;color:rgba(245,236,208,.55);}
-.dlg-text.moment{font-style:italic;color:var(--gold);
+.dlg-text{font-size:14px;line-height:1.72;color:#CAE4FF;font-style:italic;}
+/* specialized overlays still inherit base but can adjust colour */
+.dlg-text.it{ /* italic already applied */ color:#CAE4FF; }
+.dlg-text.moment{color:var(--gold);
   border-left:2px solid var(--gold-d);padding-left:10px;}
 .dlg-text.spook{color:rgba(245,200,150,.8);}
 /* footer */
