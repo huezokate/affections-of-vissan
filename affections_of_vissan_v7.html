@@ -22,7 +22,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 /* ── TYPOGRAPHY ── */
 .t-disp{font-family:'Cinzel Decorative',serif;color:var(--gold);font-weight:700;letter-spacing:.04em;}
 /* ── BUTTON ── */
-.btn{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.42em;text-transform:uppercase;
+.btn{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.42em;text-transform:uppercase;
   color:var(--cream);background:transparent;border:1px solid var(--border-hi);border-radius:6px;
   padding:14px 28px;cursor:pointer;transition:all .25s;display:inline-block;white-space:nowrap;}
 .btn:hover,.btn:active{background:rgba(245,236,208,.07);border-color:var(--gold);}
@@ -35,7 +35,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .land-image{width:100%;aspect-ratio:390/280;flex-shrink:0;overflow:hidden;margin-top:20px;}
 .land-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
 .land-body{padding:28px 28px 0;text-align:center;flex:1;}
-.land-subtitle{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.38em;text-transform:uppercase;
+.land-subtitle{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.38em;text-transform:uppercase;
   color:var(--gold);margin-bottom:20px;}
 .land-para{font-size:1.05rem;line-height:1.82;color:var(--cream-d);margin-bottom:16px;}
 .land-tagline{font-style:italic;font-size:1.05rem;color:var(--gold);margin-bottom:32px;}
@@ -45,7 +45,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .sel-header{padding:16px 20px 14px;text-align:center;}
 .sel-header h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,6vw,2rem);
   color:var(--gold);font-weight:700;margin-bottom:4px;}
-.sel-header p{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.32em;
+.sel-header p{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;
   text-transform:uppercase;color:rgba(240,201,91,.5);}
 .avatar-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:0;flex:1;min-height:0;overflow:hidden;}
 .av-card{position:relative;overflow:hidden;cursor:pointer;border:2px solid transparent;
@@ -57,21 +57,21 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .av-card::after{content:'';position:absolute;inset:0;
   background:linear-gradient(to bottom,transparent 40%,rgba(24,24,24,.88) 100%);}
 .av-card-name{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:3;
-  font-family:'Cinzel',serif;font-size:.85rem;color:var(--cream);letter-spacing:.06em;}
+  font-family:'Cinzel',serif;font-size:1rem;color:var(--cream);letter-spacing:.06em;}
 .av-card.selected::before{content:'YOU';position:absolute;top:8px;right:8px;z-index:5;
-  font-family:'Cinzel',serif;font-size:.42rem;letter-spacing:.32em;color:var(--gold);
+  font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;color:var(--gold);
   background:rgba(24,24,24,.88);padding:3px 7px;border:1px solid var(--gold-d);border-radius:3px;}
 .sel-cta{padding:12px 20px 36px;display:flex;justify-content:center;}
 /* ── INTEREST SELECT ── */
 .int-topbar{display:flex;align-items:center;padding:14px 20px 0;flex-shrink:0;}
-.int-back{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;
+.int-back{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;text-transform:uppercase;
   color:rgba(245,236,208,.45);background:none;border:none;cursor:pointer;
   display:flex;align-items:center;gap:5px;padding:0;}
 .int-back:hover{color:var(--cream);}
 .int-header{padding:10px 20px 14px;text-align:left;flex-shrink:0;}
 .int-header h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.4rem,6vw,1.9rem);
   color:var(--gold);font-weight:700;margin-bottom:4px;}
-.int-header p{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.32em;
+.int-header p{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;
   text-transform:uppercase;color:rgba(240,201,91,.5);}
 .int-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 20px 120px;position:relative;}
 .int-scroll::-webkit-scrollbar{display:none;}
@@ -85,29 +85,29 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .int-card::after{content:'';position:absolute;inset:0;
   background:linear-gradient(to bottom,transparent 40%,rgba(24,24,24,.9) 100%);}
 .int-card-info{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;z-index:3;}
-.int-card-sub{font-family:'Cinzel',serif;font-size:.44rem;letter-spacing:.3em;
+.int-card-sub{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
   text-transform:uppercase;color:rgba(240,201,91,.5);margin-bottom:2px;}
-.int-card-name{font-family:'Cinzel Decorative',serif;font-size:.9rem;font-weight:700;}
+.int-card-name{font-family:'Cinzel Decorative',serif;font-size:1rem;font-weight:700;}
 .int-card.selected::before{content:'PURSUING';position:absolute;top:8px;right:8px;z-index:5;
-  font-family:'Cinzel',serif;font-size:.4rem;letter-spacing:.28em;color:var(--gold);
+  font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;color:var(--gold);
   background:rgba(24,24,24,.9);padding:3px 7px;border:1px solid var(--gold-d);border-radius:3px;}
 .int-footer{position:fixed;bottom:0;left:0;right:0;z-index:20;padding:14px 20px 40px;
   background:linear-gradient(to top,var(--bg) 60%,transparent);
   display:flex;flex-direction:column;align-items:center;gap:8px;}
-.int-villain-hint{font-style:italic;font-size:.82rem;color:rgba(200,80,80,.55);
+.int-villain-hint{font-style:italic;font-size:1rem;color:rgba(200,80,80,.55);
   text-align:center;min-height:1.2em;}
 /* ── BIO ── */
 #s-bio{overflow-y:auto;}
 .bio-topnav{display:flex;align-items:center;justify-content:space-between;
   padding:16px 20px 10px;flex-shrink:0;}
-.bio-nav-btn{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;
+.bio-nav-btn{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;text-transform:uppercase;
   color:rgba(245,236,208,.45);background:none;border:none;cursor:pointer;
   display:flex;align-items:center;gap:5px;min-width:80px;transition:color .2s;}
 .bio-nav-btn:hover{color:var(--cream);}
 .bio-nav-btn.right{justify-content:flex-end;}
 .bio-name-center{text-align:center;}
 .bio-char-name{display:block;font-family:'Cinzel Decorative',serif;font-size:1.4rem;font-weight:700;}
-.bio-char-sub{display:block;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.3em;
+.bio-char-sub{display:block;font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
   text-transform:uppercase;color:rgba(240,201,91,.5);margin-top:2px;}
 .bio-portrait-wrap{padding:14px 28px 0;flex-shrink:0;}
 .bio-portrait-card{border-radius:var(--r);overflow:hidden;border:1.5px solid var(--gold);aspect-ratio:331/496;}
@@ -127,7 +127,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .enc-avatar{width:36px;height:36px;border-radius:50%;overflow:hidden;border:1.5px solid var(--gold);flex-shrink:0;}
 .enc-avatar img{width:100%;height:100%;object-fit:cover;object-position:top;}
 .enc-name-block{display:flex;flex-direction:column;gap:2px;}
-.enc-act-label{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.28em;
+.enc-act-label{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;
   text-transform:uppercase;color:rgba(240,201,91,.55);}
 .enc-char-name{font-family:'Cinzel Decorative',serif;font-size:1rem;font-weight:700;}
 /* pips */
@@ -137,7 +137,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .enc-pip.active{opacity:1;}
 /* barometer */
 .barometer{display:flex;flex-direction:column;align-items:flex-end;gap:3px;}
-.baro-label{font-family:'Cinzel',serif;font-size:.45rem;letter-spacing:.28em;
+.baro-label{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;
   text-transform:uppercase;color:rgba(240,201,91,.55);}
 .baro-track{width:90px;height:4px;background:rgba(255,255,255,.1);
   border:1px solid rgba(240,201,91,.3);border-radius:2px;overflow:visible;position:relative;}
@@ -147,68 +147,56 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   border-left:4px solid transparent;border-right:4px solid transparent;
   border-top:7px solid var(--gold);opacity:0;transition:opacity .4s;}
 .baro-arrow.show{opacity:1;}
-.baro-mood{font-family:'Cormorant Garamond',Georgia,serif;font-size:.75rem;font-style:italic;color:rgba(240,201,91,.7);}
+.baro-mood{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:rgba(240,201,91,.7);}
 /* dialogue */
 /*
-  Dialogue text guide:
-    • narrator lines use the "narrator" who-keyword and are rendered
-      with italic, dim cream text. Pass cls='it' to dlg() or use
-      dlg('narrator', 'text', 'it'). The who-label itself is dim gold.
-    • character lines (interest/villain) are upright cream with a named
-      colour token defined in GAME_DATA.characters[]. They use the
-      default class and may supply cls='spook' or 'moment' for special
-      moments.
-    • player lines use who='player'; label reads YOU and is silver-blue.
-    • For "moment of affection" beats include cls='moment' which adds
-      italic gold text and a left border. cls='spook' applies a warm
-      hue for startled/reaction lines.
+  Figma text guide: https://www.figma.com/design/b8cZJexAG5MJEXCpn3WT2o/Affections-of-Vissan?node-id=41-455&m=dev
 
-  The dlg() helper (see JS) accepts optional class names that map to
-  the CSS rules below. When writing new content in GAME_DATA, set the
-  appropriate class on any exchange or narration to trigger these
-  variations. See the `cls` field in sample exchange objects.
-
-  Answer selection styling:
-    • Choice buttons (.choice-btn) are italic Cormorant Garamond,
-      left-aligned, with a faint gold-spaced border and rounded corners.
-    • Each choice includes a trait tag rendered inside a span.choice-tag
-      above the text; the tag uses Cinzel small‑caps and a dim gold
-      colour. The markup for a button is generated by setChoices().
-    • Hover state brightens the border and background; :disabled state
-      greys the button for clarity.
-    • If future designs require colour‑coding by trait or category, add
-      custom data-* attributes on the button and adjust CSS accordingly.
+  Dialogue text guide (WCAG — 16px minimum for all body/speech/labels):
+    • narrator lines: who='narrator'. Auto-receives 'it' class → italic,
+      default cream-dim text. Who-label is #CAE4FF.
+    • character lines (interest/villain): upright, character colour applied
+      to BOTH the who-label AND the speech text via inline style.
+      Character colours — Kohan:#FFF1C6  Andam:#E7DCFF  Catarina:#FFBDB7  Max:#DDFFC3
+    • player lines: who='player'; label reads YOU in #A8C5DA, text cream.
+    • 'moment' class: affection beat → italic gold + left border. No character
+      colour override (gold takes precedence).
+    • 'spook' class: startled reaction → warm hue. No character colour override.
+    • Italic is ONLY for narrator text and action descriptions — never for
+      regular character dialogue.
+    • cls='it' may still be passed explicitly; narrator auto-receives it.
 */
 .enc-panel{flex:1;display:flex;flex-direction:column;overflow:hidden;}
 .dialogue-area{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 16px 8px;}
 .dialogue-area::-webkit-scrollbar{width:0;}
 .dlg-line{margin-bottom:12px;animation:fadeup .38s ease both;}
-.dlg-who{font-family:'Cinzel',serif;font-size:.48rem;letter-spacing:.3em;
+.dlg-who{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
   text-transform:uppercase;margin-bottom:3px;}
 .dlg-who.narrator{color:#CAE4FF;}
 .dlg-who.player{color:#A8C5DA;}
 .dlg-who.villain{color:rgba(200,80,80,.75);}
-.dlg-text{font-size:14px;line-height:1.72;color:#CAE4FF;font-style:italic;}
-/* specialized overlays still inherit base but can adjust colour */
-.dlg-text.it{ /* italic already applied */ color:#CAE4FF; }
-.dlg-text.moment{color:var(--gold);
+.dlg-text{font-size:1rem;line-height:1.72;color:var(--cream-d);}
+.dlg-text.narrator,.dlg-text.it{font-style:italic;color:#CAE4FF;}
+.dlg-text.player{color:rgba(245,236,208,.75);}
+.dlg-text.villain{color:rgba(220,170,170,.85);}
+.dlg-text.moment{font-style:italic;color:var(--gold);
   border-left:2px solid var(--gold-d);padding-left:10px;}
 .dlg-text.spook{color:rgba(245,200,150,.8);}
 /* footer */
 .enc-footer{flex-shrink:0;border-top:1px solid rgba(240,201,91,.10);padding:10px 14px 20px;}
-.choices-lbl{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.3em;
+.choices-lbl{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
   text-transform:uppercase;color:rgba(245,236,208,.4);margin-bottom:8px;}
 .choices-grid{display:flex;flex-direction:column;gap:6px;}
-.choice-btn{font-family:'Cormorant Garamond',Georgia,serif;font-size:.95rem;font-style:italic;
+.choice-btn{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;
   color:var(--cream-d);background:transparent;border:1px solid rgba(245,236,208,.2);
   border-radius:6px;padding:9px 14px;cursor:pointer;text-align:left;transition:all .2s;line-height:1.4;}
 .choice-btn:hover{border-color:var(--gold);background:rgba(240,201,91,.06);color:var(--cream);}
 .choice-btn:disabled{opacity:.42;pointer-events:none;}
-.choice-tag{font-family:'Cinzel',serif;font-size:.44rem;letter-spacing:.28em;
+.choice-tag{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;
   text-transform:uppercase;color:rgba(240,201,91,.65);display:block;margin-bottom:3px;}
 .continue-row{display:none;justify-content:flex-end;margin-top:8px;}
 .continue-row.show{display:flex;}
-.btn-continue{font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.38em;text-transform:uppercase;
+.btn-continue{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.38em;text-transform:uppercase;
   color:var(--gold);background:transparent;border:1px solid rgba(240,201,91,.4);
   border-radius:5px;padding:10px 20px;cursor:pointer;transition:all .25s;}
 .btn-continue:hover{border-color:var(--gold);background:rgba(240,201,91,.08);}
@@ -224,7 +212,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .result-body{padding:24px 28px 8px;text-align:center;flex:1;}
 .result-body p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;
   line-height:1.82;color:var(--cream-d);margin-bottom:16px;}
-.result-goal-lbl{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.38em;
+.result-goal-lbl{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.38em;
   text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px;}
 .result-cta{padding:0 28px 48px;display:flex;flex-direction:column;align-items:center;gap:12px;}
 /* ── TRUE ENDING ── */
@@ -237,7 +225,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .true-body{padding:32px 28px 0;text-align:center;flex:1;}
 .true-title{font-family:'Cinzel Decorative',serif;font-size:clamp(1.8rem,7vw,2.6rem);
   color:var(--gold);font-weight:700;letter-spacing:.06em;margin-bottom:12px;}
-.true-char{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.38em;
+.true-char{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.38em;
   text-transform:uppercase;color:rgba(240,201,91,.55);margin-bottom:24px;}
 .true-narration{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;
   line-height:1.92;color:var(--cream-d);margin-bottom:20px;}
@@ -2004,7 +1992,7 @@ function dlg(who,text,cls){
   div.className='dlg-line';
   var wl,wc,wcolor='';
   if(who==='narrator'){wl='NARRATOR';wc='narrator';}
-  else if(who==='player'){wl='YOU';wc='player';}
+  else if(who==='player'){wl='YOU';wc='player';var pc=CHARS[G.player];wcolor=pc?pc.color:'';}
   else if(who==='interest'){
     var ch=CHARS[G.interest];
     wl=ch.name.toUpperCase();wc='interest';wcolor=ch.color;
@@ -2015,7 +2003,12 @@ function dlg(who,text,cls){
   }
   else{wl=who.toUpperCase();wc='narrator';}
   var whoEl='<div class="dlg-who '+wc+'"'+(wcolor?' style="color:'+wcolor+'"':'')+'>'+wl+'</div>';
-  div.innerHTML=whoEl+'<div class="dlg-text '+(cls||'')+'">'+text+'</div>';
+  /* narrator auto-receives italic; moment/spook use their own CSS colours so skip inline color */
+  var autoIt=(who==='narrator')?'it':'';
+  var effectiveCls=cls||autoIt;
+  var skipInlineColor=['moment','spook'];
+  var textColorStyle=(wcolor&&skipInlineColor.indexOf(effectiveCls)<0)?' style="color:'+wcolor+'"':'';
+  div.innerHTML=whoEl+'<div class="dlg-text '+wc+(effectiveCls?' '+effectiveCls:'')+'"'+textColorStyle+'>'+text+'</div>';
   area.appendChild(div);
   wait(40,function(){area.scrollTop=area.scrollHeight;});
   return div;
