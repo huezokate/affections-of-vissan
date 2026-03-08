@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1.0,viewport-fit=cover'>
-<title>The Affinity of Vissan</title>
+<title>Affections of Vissan</title>
 <link href='https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap' rel='stylesheet'>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -238,6 +238,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   color:var(--gold);border-left:2px solid var(--gold-d);padding:4px 0 4px 14px;
   text-align:left;margin-bottom:28px;}
 .true-cta{padding:0 28px 60px;display:flex;justify-content:center;}
+/* ── HOW TO PLAY ── */
+#s-howto{overflow-y:auto;}
+.howto-body{padding:36px 28px 0;text-align:center;flex:1;}
+.howto-body h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,6vw,2rem);color:var(--gold);font-weight:700;margin-bottom:28px;}
+.howto-para{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;line-height:1.82;color:var(--cream-d);margin-bottom:16px;text-align:left;}
+.howto-para strong{color:var(--cream);}
+.howto-meter-row{display:flex;align-items:center;gap:12px;margin:20px 0;justify-content:center;}
+.howto-meter-note{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:rgba(240,201,91,.7);text-align:center;margin-bottom:24px;}
+.howto-cta{padding:20px 28px 52px;display:flex;justify-content:center;}
+/* ── RESULT SCORES ── */
+.result-scores{display:flex;justify-content:center;gap:28px;padding:14px 0 4px;}
+.result-score-block{text-align:center;}
+.result-score-val{font-family:'Cinzel Decorative',serif;font-size:1.4rem;font-weight:700;color:var(--gold);}
+.result-score-lbl{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(240,201,91,.5);display:block;margin-top:2px;}
 /* ── ANIMATIONS ── */
 @keyframes fadeup{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 </style>
@@ -247,7 +261,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 
 <!-- 1. LANDING -->
 <section class='screen active' id='s-land'>
-  <div class='land-title'><h1>THE AFFINITY<br>OF VISSAN</h1></div>
+  <div class='land-title'><h1>AFFECTIONS<br>OF VISSAN</h1></div>
   <div class='land-image'><img id='img-land' src='' alt='Vissan'></div>
   <div class='land-body'>
     <div class='land-subtitle'>AN AI-DRIVEN VISUAL NOVEL</div>
@@ -255,7 +269,22 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
     <p class='land-para'>Below their spires, humans born with arcane gifts and elves bound by ancient oaths navigate a world where every alliance is a weapon — and every emotion, a door.</p>
     <p class='land-tagline'>Some doors should not be opened carelessly.</p>
   </div>
-  <div class='land-cta'><button class='btn' onclick="goTo('s-avatar')">ENTER VISSAN</button></div>
+  <div class='land-cta'><button class='btn' onclick="goTo('s-howto')">ENTER VISSAN</button></div>
+</section>
+
+<!-- 1b. HOW TO PLAY -->
+<section class='screen' id='s-howto'>
+  <div class='howto-body scroll-y'>
+    <h2>HOW TO PLAY</h2>
+    <p class='howto-para'>In Vissan, any character can become your story — or your challenge.</p>
+    <p class='howto-para'>Choose who you play as. Choose who you pursue. Study them carefully: their words, their silences, their reactions.</p>
+    <p class='howto-para'>Every character holds secrets. Every answer you give shapes how they see you. Choose wisely — or discover what happens when you don't.</p>
+    <p class='howto-para'>The story unfolds across <strong>three acts</strong>. In each act, you'll face three scenes. Each scene presents choices. Each response earns points based on how well it reads your love interest.</p>
+    <p class='howto-para'><strong>Score 10 or more points out of 18 to win their sign of affection.</strong></p>
+    <p class='howto-para'>Fall short and you may still leave with something — just not what you hoped for.</p>
+    <p class='howto-meter-note'>Watch the affection meter closely. It reveals their emotional state in real time — but not your point total. Trust your instincts.</p>
+  </div>
+  <div class='howto-cta'><button class='btn' onclick="goTo('s-avatar')">I'M READY →</button></div>
 </section>
 
 <!-- 2. AVATAR SELECT -->
@@ -315,7 +344,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
         </div>
       </div>
       <div class='barometer'>
-        <div class='baro-label'>INTEREST</div>
+        <div class='baro-label'>AFFECTION</div>
         <div class='baro-track'>
           <div class='baro-fill' id='baro-fill' style='width:30%'>
             <div class='baro-arrow' id='baro-arrow'></div>
@@ -348,8 +377,17 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
     <div class='result-portrait'><img id='result-portrait-img' src='' alt=''></div>
   </div>
   <div class='result-body'>
+    <div class='result-scores'>
+      <div class='result-score-block'>
+        <div class='result-score-val' id='result-score-act'></div>
+        <span class='result-score-lbl'>This Act</span>
+      </div>
+      <div class='result-score-block'>
+        <div class='result-score-val' id='result-score-total'></div>
+        <span class='result-score-lbl'>Total</span>
+      </div>
+    </div>
     <p id='result-msg'></p>
-    <span class='result-goal-lbl'>What is your next goal?</span>
   </div>
   <div class='result-cta' id='result-cta'></div>
 </section>
@@ -1956,14 +1994,41 @@ var TRUE_END = {
    GAME STATE
 ═══════════════════════════════════════════════ */
 var G = {
-  player:   null,  /* character key */
-  interest: null,  /* character key */
-  villain:  null,  /* character key */
-  round:    1,     /* 1-3 */
-  scene:    0,     /* 0-2 (index) */
-  exchange: 0,     /* 0-2 (index within scene) */
-  trust:    30,
-  spookUsed:false
+  player:     null,  /* character key */
+  interest:   null,  /* character key */
+  villain:    null,  /* character key */
+  act:        1,     /* 1-3 */
+  scene:      0,     /* 0-2 (index) */
+  exchange:   0,     /* 0-2 (index within scene) */
+  trust:      30,    /* barometer display only */
+  actScore:   0,     /* 0-6 per act */
+  totalScore: 0,     /* 0-18 cumulative */
+  spookUsed:  false
+};
+
+/* ═══════════════════════════════════════════════
+   TRAIT POINTS — per act, per character
+   Curiosity / Honesty / Deflection / Strategy → 2/1/1/0
+═══════════════════════════════════════════════ */
+var TRAIT_POINTS = {
+  1: {
+    kohan:    {Curiosity:2, Honesty:1, Deflection:1, Strategy:0},
+    catarina: {Strategy:2, Deflection:1, Honesty:1, Curiosity:0},
+    max:      {Honesty:2, Curiosity:1, Strategy:1, Deflection:0},
+    andam:    {Deflection:2, Strategy:1, Curiosity:1, Honesty:0}
+  },
+  2: {
+    kohan:    {Strategy:2, Honesty:1, Curiosity:1, Deflection:0},
+    catarina: {Honesty:2, Strategy:1, Deflection:1, Curiosity:0},
+    max:      {Deflection:2, Honesty:1, Curiosity:1, Strategy:0},
+    andam:    {Curiosity:2, Deflection:1, Strategy:1, Honesty:0}
+  },
+  3: {
+    kohan:    {Honesty:2, Curiosity:1, Strategy:1, Deflection:0},
+    catarina: {Curiosity:2, Honesty:1, Strategy:1, Deflection:0},
+    max:      {Honesty:2, Curiosity:1, Deflection:1, Strategy:0},
+    andam:    {Curiosity:2, Honesty:1, Deflection:1, Strategy:0}
+  }
 };
 
 /* ═══════════════════════════════════════════════
@@ -2109,8 +2174,14 @@ function onContinue(){var cb=_continue;hideContinue();if(cb)cb();}
 /* BAROMETER */
 function getMoodLabel(){
   var t=G.trust;
-  if(t<=20)return'Cold';if(t<=35)return'Guarded';if(t<=50)return'Curious';
-  if(t<=65)return'Interested';if(t<=80)return'Warm';return'Captivated';
+  var labels={
+    1:[[20,'Bored'],[35,'Neutral'],[50,'Intrigued'],[65,'Engaged'],[80,'Engaged'],[100,'Captivated']],
+    2:[[20,'Closed'],[35,'Watchful'],[50,'Interested'],[65,'Trusting'],[80,'Trusting'],[100,'Allied']],
+    3:[[20,'Gone'],[35,'Aware'],[50,'Drawn'],[65,'Wanting'],[80,'Wanting'],[100,'Yours']]
+  };
+  var al=labels[G.act]||labels[1];
+  for(var i=0;i<al.length;i++){if(t<=al[i][0])return al[i][1];}
+  return al[al.length-1][1];
 }
 function updateBaro(moodOverride){
   var pct=Math.max(4,Math.min(96,G.trust));
@@ -2127,16 +2198,19 @@ function buildPips(){
   _pipColors=[];
   var ic=CHARS[G.interest].color;
   var vc=G.villain?CHARS[G.villain].color:'#888';
-  /* Scene 2 has a villain exchange at index 1; all others are interest */
-  var cols=(G.scene===1)?[ic,vc,ic]:[ic,ic,ic];
-  cols.forEach(function(c,i){
-    _pipColors.push(c);
-    var p=document.createElement('div');
-    p.className='enc-pip';
-    p.style.background=c;
-    p.id='pip-'+i;
-    pips.appendChild(p);
-  });
+  /* 9 pips total per act: 3 scenes × 3 exchanges */
+  /* scene 1 (idx 1), exchange 1 (idx 1) = pip 4 → villain color */
+  for(var s=0;s<3;s++){
+    for(var e=0;e<3;e++){
+      var c=(s===1&&e===1)?vc:ic;
+      _pipColors.push(c);
+      var p=document.createElement('div');
+      p.className='enc-pip';
+      p.style.background=c;
+      p.id='pip-'+(s*3+e);
+      pips.appendChild(p);
+    }
+  }
 }
 function updatePip(idx,state){
   /* state: 'done'|'active'|'' */
@@ -2150,8 +2224,8 @@ function updatePip(idx,state){
     p.style.boxShadow='';
   }
 }
-/* Bug 3 fix: pip index is within current scene only (0–2) */
-function getPipIndex(scene,exIdx){return exIdx;}
+/* 9 pips per act: scene*3 + exchangeIdx */
+function getPipIndex(scene,exIdx){return scene*3+exIdx;}
 
 /* ═══════════════════════════════════════════════
    SCREEN BUILDERS
@@ -2273,7 +2347,7 @@ function startEncounter(){
   /* pick villain */
   var pool=BIO_ORDER.filter(function(k){return k!==G.player&&k!==G.interest;});
   G.villain=pool[Math.floor(Math.random()*pool.length)];
-  G.trust=30; G.spookUsed=false; G.scene=0; G.exchange=0;
+  G.act=1; G.trust=30; G.actScore=0; G.totalScore=0; G.spookUsed=false; G.scene=0; G.exchange=0;
 
   var ch=CHARS[G.interest];
   document.getElementById('enc-portrait-img').src=IMG[G.interest];
@@ -2286,8 +2360,6 @@ function startEncounter(){
   clearDlg(); clearChoices(); hideContinue();
   buildPips();
 
-  /* set background */
-  var rd=GAME_DATA[G.interest].rounds[G.round-1];
   document.getElementById('enc-portrait-img').src=IMG[G.interest];
 
   goTo('s-encounter');
@@ -2295,7 +2367,7 @@ function startEncounter(){
 }
 
 function getSceneData(){
-  return GAME_DATA[G.interest].rounds[G.round-1].scenes[G.scene];
+  return GAME_DATA[G.interest].rounds[G.act-1].scenes[G.scene];
 }
 
 function startScene(sceneIdx){
@@ -2303,7 +2375,6 @@ function startScene(sceneIdx){
   _lastWho='';
   var sd=getSceneData();
   document.getElementById('act-badge').textContent=sd.label;
-  buildPips(); /* Bug 3 fix: rebuild 3 pips for this scene */
   /* opening narration staggered */
   var d=0;
   (sd.open||[]).forEach(function(l){
@@ -2336,12 +2407,15 @@ function runExchange(exIdx){
 
 function handleChoice(c,exIdx){
   var pipIdx=getPipIndex(G.scene,exIdx);
-  /* bold spook check */
-  if(c.bold&&G.trust<45){
+  /* bold spook check — triggers when actScore < 2 */
+  if(c.bold&&G.actScore<2){
     handleSpook(exIdx);
     return;
   }
-  G.trust=Math.max(0,Math.min(100,G.trust+c.trust));
+  G.trust=Math.max(0,Math.min(100,G.trust+(c.trust||0)));
+  var pts=(TRAIT_POINTS[G.act]&&TRAIT_POINTS[G.act][G.interest]&&
+    TRAIT_POINTS[G.act][G.interest][c.tag])||0;
+  G.actScore=Math.min(6,G.actScore+pts);
   wait(150,function(){
     dlg('player',c.text);
     wait(550,function(){
@@ -2405,7 +2479,7 @@ function handleSpook(exIdx){
       if(G.spookUsed){
         /* second spook — fail */
         dlg('narrator','She does not look back.','it');
-        wait(500,function(){showContinue('THE EVENING ENDS →',function(){endRound('fail');});});
+        wait(500,function(){showContinue('CONTINUE →',function(){endAct();});});
         return;
       }
       G.spookUsed=true;
@@ -2430,7 +2504,7 @@ function handleSpook(exIdx){
                   wait(700,function(){
                     dlg('narrator','The evening closes.','it');
                     wait(500,function(){
-                      showContinue('THE EVENING ENDS →',function(){endRound('fail');});
+                      showContinue('CONTINUE →',function(){endAct();});
                     });
                   });
                 }
@@ -2444,104 +2518,126 @@ function handleSpook(exIdx){
 }
 
 function afterScene(){
-  var sd=getSceneData();
   if(G.scene<2){
     /* advance to next scene */
     wait(300,function(){
       showContinue('CONTINUE →',function(){startScene(G.scene+1);});
     });
   } else {
-    /* scene 3 — evaluate */
-    var outcome=G.trust>=50?'win':'fail';
-    var res=G.trust>=50?sd.winRes:sd.failRes;
+    /* scene 3 done — go to act result */
     wait(300,function(){
-      dlg('narrator',res.narration,'it');
-      wait(700,function(){
-        if(outcome==='win'){
-          dlg('interest',res.moment,'moment');
-          wait(600,function(){
-            showContinue('CONTINUE →',function(){endRound('win');});
-          });
-        } else {
-          dlg('narrator',res.closing,'it');
-          wait(500,function(){
-            showContinue('THE EVENING ENDS →',function(){endRound('fail');});
-          });
-        }
-      });
+      showContinue('CONTINUE →',function(){endAct();});
     });
   }
 }
 
 /* ── END ROUND ── */
-function endRound(outcome){
+/* ── END ACT ── */
+function endAct(){
+  G.totalScore+=G.actScore;
   var ch=CHARS[G.interest];
-  if(outcome==='win'&&G.round===3){showTrueEnd();return;}
-
-  var titles={win:['A First Step Taken','The Bond Deepens','The Final Answer'],
-              fail:['The Evening Closes','The Evening Closes','The Evening Closes']};
-  var msgs={
-    win:[ch.name+' has agreed to meet you again. Something quiet and real has begun.',
-         'The distance between you has closed. What comes next is uncharted.',
-         'The final round has been won. Something has been decided — by both of you.'],
-    fail:['This path did not lead where you hoped. Another approach, another chance.',
-          'The moment passed before it arrived. It can still be reached.',
-          'The last attempt did not find its mark. The story is not over.']
+  var actTier=G.actScore>=4?'high':G.actScore>=2?'mid':'low';
+  var actTitles={
+    high:['A Promising Start','The Bond Deepens','The Final Move'],
+    mid: ['Mixed Signals','Common Ground','So Close'],
+    low: ['A Cold Evening','Distance Remains','The Chance Passed']
   };
-  var ri=G.round-1;
-  document.getElementById('result-title').textContent=titles[outcome][ri];
-  document.getElementById('result-title').style.color=outcome==='win'?ch.color:'var(--cream)';
+  var actMsgs={
+    high:[ch.name+' has noticed you. Something real has begun.',
+          'The distance between you is closing. Something is building.',
+          'You gave everything. Whether it was enough — you\'ll find out.'],
+    mid: ['A guarded start. There\'s more to earn.',
+          'Some ground gained. The final act is everything.',
+          'It could have gone either way. The story is complete.'],
+    low: ['The evening was cool. A different approach may change everything.',
+          'The distance remains. Act 3 is your last chance.',
+          'The moment passed. Perhaps another path holds more.']
+  };
+  document.getElementById('result-title').textContent=actTitles[actTier][G.act-1];
+  document.getElementById('result-title').style.color=ch.color;
   document.getElementById('result-bg-img').src=BG.world;
   document.getElementById('result-portrait-img').src=IMG[G.interest];
-  document.getElementById('result-msg').textContent=msgs[outcome][ri];
-
+  document.getElementById('result-score-act').textContent=G.actScore+' / 6';
+  document.getElementById('result-score-total').textContent=G.totalScore+' / 18';
+  document.getElementById('result-msg').textContent=actMsgs[actTier][G.act-1];
   var cta=document.getElementById('result-cta');
-  if(outcome==='win'){
-    cta.innerHTML='<button class="btn" onclick="nextRound()">DEEPEN THE BOND →</button>';
+  if(G.act<3){
+    cta.innerHTML='<button class="btn" onclick="nextAct()">CONTINUE →</button>';
   } else {
-    cta.innerHTML=
-      '<button class="btn" onclick="retryFull()">TRY AGAIN</button>'+
-      '<button class="btn" style="border-color:rgba(220,90,90,.35);color:rgba(220,100,100,.7)" onclick="goTo(\'s-avatar\');buildAvatarGrid()">CHOOSE A DIFFERENT PATH</button>';
+    cta.innerHTML='<button class="btn" onclick="showFinalEnd()">CONTINUE →</button>';
   }
   goTo('s-result');
 }
 
-function nextRound(){
-  G.round++;
-  startEncounter();
+function nextAct(){
+  G.act++;
+  G.actScore=0;
+  G.trust=30;
+  G.spookUsed=false;
+  var pool=BIO_ORDER.filter(function(k){return k!==G.player&&k!==G.interest;});
+  G.villain=pool[Math.floor(Math.random()*pool.length)];
+  G.scene=0; G.exchange=0;
+  document.getElementById('baro-arrow').classList.remove('show');
+  document.getElementById('baro-mood').textContent='—';
+  document.getElementById('baro-fill').style.width='30%';
+  clearDlg(); clearChoices(); hideContinue();
+  buildPips();
+  goTo('s-encounter');
+  startScene(0);
+}
+
+function showFinalEnd(){
+  var ch=CHARS[G.interest];
+  var score=G.totalScore;
+  if(score>=10){
+    var te=TRUE_END[G.interest];
+    document.getElementById('true-title').textContent=te.title;
+    document.getElementById('true-title').style.color=ch.color;
+    document.getElementById('true-char').textContent=te.char;
+    document.getElementById('true-narration').textContent=te.narration;
+    document.getElementById('true-moment').textContent=te.moment;
+    document.querySelector('#s-true-end .true-cta').innerHTML=
+      '<button class="btn" onclick="fullReset()">PLAY AGAIN</button>'+
+      '<button class="btn" style="margin-top:8px" onclick="chooseAnother()">PURSUE ANOTHER</button>';
+  } else {
+    document.getElementById('true-title').textContent=score>=5?'Close, But Not Quite':'Something Passed Between You';
+    document.getElementById('true-title').style.color='var(--cream)';
+    document.getElementById('true-char').textContent='Score: '+score+' / 18';
+    document.getElementById('true-narration').textContent=score>=5?
+      'There was something real between you \u2014 a thread, a warmth, a moment that almost became more. Maybe the timing was wrong. Maybe a different approach would change everything. There\u2019s only one way to find out.':
+      'Not everything that starts becomes a story. But you were here, and they noticed. That matters \u2014 even if neither of you can say exactly how.';
+    document.getElementById('true-moment').textContent='';
+    document.querySelector('#s-true-end .true-cta').innerHTML=
+      '<button class="btn" onclick="retryFull()">TRY AGAIN</button>'+
+      '<button class="btn" style="margin-top:8px" onclick="fullReset()">CHOOSE DIFFERENTLY</button>';
+  }
+  document.getElementById('true-bg-img').src=BG.world;
+  document.getElementById('true-portrait-img').src=IMG[G.interest];
+  goTo('s-true-end');
+}
+
+function chooseAnother(){
+  G.interest=null; G.act=1; G.actScore=0; G.totalScore=0; G.trust=30; G.villain=null;
+  buildInterestCards();
+  goTo('s-interest');
 }
 
 function retryFull(){
-  G.round=1; G.trust=30; G.spookUsed=false; G.villain=null;
+  G.act=1; G.trust=30; G.actScore=0; G.totalScore=0; G.spookUsed=false; G.villain=null;
   buildAvatarGrid();
   goTo('s-avatar');
 }
 
 function fullReset(){
   G.player=null; G.interest=null; G.villain=null;
-  G.round=1; G.trust=30; G.spookUsed=false;
+  G.act=1; G.trust=30; G.actScore=0; G.totalScore=0; G.spookUsed=false;
   buildAvatarGrid();
   goTo('s-avatar');
-}
-
-/* ── TRUE ENDING ── */
-function showTrueEnd(){
-  var te=TRUE_END[G.interest];
-  var ch=CHARS[G.interest];
-  document.getElementById('true-bg-img').src=BG.world;
-  document.getElementById('true-portrait-img').src=IMG[G.interest];
-  document.getElementById('true-title').textContent=te.title;
-  document.getElementById('true-title').style.color=ch.color;
-  document.getElementById('true-char').textContent=te.char;
-  document.getElementById('true-narration').textContent=te.narration;
-  document.getElementById('true-moment').textContent=te.moment;
-  goTo('s-true-end');
 }
 
 /* ═══════════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════════ */
-G.player='kohan';
 buildAvatarGrid();
 
 </script>
