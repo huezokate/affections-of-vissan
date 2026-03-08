@@ -336,7 +336,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
     <img id='enc-portrait-img' src='' alt=''>
     <div class='enc-portrait-footer'>
       <div class='enc-left'>
-        <div class='enc-avatar'><img id='enc-avatar-img' src='' alt=''></div>
         <div class='enc-name-block'>
           <span class='enc-act-label' id='act-badge'></span>
           <span class='enc-char-name' id='enc-interest-name'></span>
@@ -2234,7 +2233,7 @@ function setChoices(label,choices,handler){
     var btn=document.createElement('button');
     btn.className='choice-btn';
     btn.style.borderColor='rgba('+hexToRgb(pcolor)+',0.35)';
-    btn.innerHTML='<span class="choice-tag">'+c.tag+'</span>'+c.text;
+    btn.innerHTML='<span class="choice-tag" style="color:'+pcolor+'">'+c.tag+'</span>'+c.text;
     btn.onclick=function(){
       document.querySelectorAll('.choice-btn').forEach(function(b){b.disabled=true;});
       handler(c);
@@ -2453,7 +2452,7 @@ function startEncounter(){
 
   var ch=CHARS[G.interest];
   document.getElementById('enc-portrait-img').src=IMG[G.interest];
-  document.getElementById('enc-avatar-img').src=IMG[G.player];
+  /* enc-avatar removed from portrait strip; player avatar is footer-only */
   document.getElementById('enc-interest-name').textContent=ch.name;
   document.getElementById('enc-interest-name').style.color=ch.color;
   document.getElementById('baro-arrow').classList.remove('show');
