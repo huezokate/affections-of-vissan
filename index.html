@@ -525,7 +525,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"I am not entirely sure. But I knew I would regret not asking."',
         reply:'"Not entirely sure." She repeats it without mockery. "I can work with that. Most people here are entirely sure and entirely wrong."',trust:8,mood:'Considering'},
        {tag:'Strategy',text:'"I am looking for someone who understands how this kingdom works. You seem like that person."',
-        reply:'"You want information dressed as a social encounter." The flame dims slightly. "At least your framing is efficient."',trust:0,mood:'Cool'}
+        reply:'"You want information dressed as a social encounter." The flame dims slightly. "At least your framing is efficient."',trust:0,mood:'Cool'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'She lets the flame extinguish, then rekindles it from a single spark. A small performance she does not acknowledge as one.'},
       choices:[
@@ -534,7 +535,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"That is what I came to find out. What do you actually want?"',
         reply:'A pause. The flame brightens. "That is the question, isn\'t it." She does not answer — but she does not leave.',trust:16,mood:'Engaged'},
        {tag:'Deflection',text:'"The same things most people want. Survival. A degree of respect."',
-        reply:'"And you think that answer satisfies me?" The fire dims. "I hoped for something more specific."',trust:0,mood:'Unimpressed'}
+        reply:'"And you think that answer satisfies me?" The fire dims. "I hoped for something more specific."',trust:0,mood:'Unimpressed'},
+       {tag:'Strategy',text:'"I think this could be mutually useful for both of us."',reply:'"Useful." The flame dims slightly. "You sound like a treaty."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"Tell me something about yourself that is actually true. Not the version you give strangers."'},
       choices:[
@@ -543,7 +545,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"I came here expecting very little. I did not expect to still be standing here."',
         reply:'"Neither did I." Her voice quiets. The flame shifts warmer. "The evening is not over."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"I adapt to what a situation requires. Flexibility has kept me alive."',
-        reply:'"That is the version you give strangers." She tilts her head. "I asked for the one you do not."',trust:0,mood:'Guarded'}
+        reply:'"That is the version you give strangers." She tilts her head. "I asked for the one you do not."',trust:0,mood:'Guarded'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 2 — Villain Entrance */
@@ -559,7 +562,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"I want to understand what makes a kingdom like this function — the real structure, not the visible one."',
         reply:'"The real structure." She looks at you differently. "Most visitors do not ask that. They think they already know."',trust:16,mood:'Interested'},
        {tag:'Strategy',text:'"I want to position myself usefully here. I will decide the rest once I understand the terrain."',
-        reply:'"Useful." She tastes the word. "An honest answer, at least." She keeps walking.',trust:0,mood:'Neutral'}
+        reply:'"Useful." She tastes the word. "An honest answer, at least." She keeps walking.',trust:0,mood:'Neutral'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -582,7 +586,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"That the interruption was deliberate, and that you did not want it."',
         reply:'"Correct." She is quiet a moment. "And that you noticed without making it loud — that is something."',trust:8,mood:'Touched'},
        {tag:'Strategy',text:'"That this is the kind of court dynamic I need to understand quickly."',
-        reply:'"Court dynamic." She tests the phrase. "Not wrong. Also not the whole answer." She keeps walking.',trust:0,mood:'Assessing'}
+        reply:'"Court dynamic." She tests the phrase. "Not wrong. Also not the whole answer." She keeps walking.',trust:0,mood:'Assessing'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 3 — Aftermath */
@@ -599,7 +604,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"I would say: I do not need you to trust me tonight. I would rather earn it."',
         reply:'"Earn it." She repeats it slowly. "Most people want shortcuts." Her voice softens. "That is a patience I respect."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"I would note that you are still here, which suggests you already have."',
-        reply:'"A strategist to the end." She tilts her head. "Not wrong. That does not mean I have to like the observation."',trust:0,mood:'Wry'}
+        reply:'"A strategist to the end." She tilts her head. "Not wrong. That does not mean I have to like the observation."',trust:0,mood:'Wry'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'A warm wind picks up, carrying petals from somewhere inland. Neither of you speaks.'},
       choices:[
@@ -608,7 +614,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"I am still forming mine. You are the clearest signal I have found so far."',
         reply:'"A signal." She almost laughs. "I have been called many things. That one is new." But she holds your gaze.',trust:16,mood:'Warm'},
        {tag:'Deflection',text:'"Beautiful and dangerous. The standard description, I suppose."',
-        reply:'"The standard description." Flat. "You can do better than that." She turns back to the flame.',trust:0,mood:'Disappointed'}
+        reply:'"The standard description." Flat. "You can do better than that." She turns back to the flame.',trust:0,mood:'Disappointed'},
+       {tag:'Strategy',text:'"I think this could be mutually useful for both of us."',reply:'"Useful." The flame dims slightly. "You sound like a treaty."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"If I said: come find me at sunrise — would you come?"'},
       choices:[
@@ -617,7 +624,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"Yes. I would come."',
         reply:'"Then I will be there." She says it quietly, with a certainty that feels different from her earlier composure. This is real.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"I would want to know what to expect, first."',
-        reply:'"Of course you would." Her expression closes — gently. "The invitation stands. Think about it."',trust:0,mood:'Guarded'}
+        reply:'"Of course you would." Her expression closes — gently. "The invitation stands. Think about it."',trust:0,mood:'Guarded'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
    ],
    winRes:{
@@ -647,7 +655,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"Because I almost did not — and then I realized I would regret it for a very long time."',
         reply:'"Almost." She sounds like she is testing the weight of the word. "At least you are honest about ambivalence."',trust:8,mood:'Considering'},
        {tag:'Curiosity',text:'"Because I thought about it all evening and still wanted to know what you were going to show me."',
-        reply:'A slow nod. "Good." She turns. "Come. The mist is still useful."',trust:8,mood:'Warm'}
+        reply:'A slow nod. "Good." She turns. "Come. The mist is still useful."',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'She shows you the way fire spreads across the dewy grass — not destruction, but warmth that moves without hurting.'},
       choices:[
@@ -656,7 +665,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"That you want to be understood by someone who can actually handle knowing something real."',
         reply:'A longer pause than usual. "Yes." Simple and unqualified. "That is exactly it."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"That you trust me more than you expected to — and it is uncomfortable."',
-        reply:'"Uncomfortable." She almost smiles. "That is accurate." She does not deny it.',trust:8,mood:'Amused'}
+        reply:'"Uncomfortable." She almost smiles. "That is accurate." She does not deny it.',trust:8,mood:'Amused'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"Ask me the question you have been waiting to ask."'},
       choices:[
@@ -665,7 +675,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"What are you afraid of?"',
         reply:'A long silence. The fire stills. "Being completely known by someone, and finding out it was not enough." She says it as if she has not said it before.',trust:8,mood:'Vulnerable'},
        {tag:'Honesty',text:'"Are you alright? Truly — not the version you give people."',
-        reply:'"No one has asked me that before." Her voice is quieter. "I am... getting there." Something in her posture eases.',trust:8,mood:'Moved'}
+        reply:'"No one has asked me that before." Her voice is quieter. "I am... getting there." Something in her posture eases.',trust:8,mood:'Moved'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 2 */
@@ -681,7 +692,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"I would tell you honestly how I felt and decide together."',
         reply:'"Together." She tastes the word. "I have not done much together. It is not a bad answer."',trust:8,mood:'Warm'},
        {tag:'Curiosity',text:'"I would want to understand the complication fully before deciding. What kind of stakes are you imagining?"',
-        reply:'"The kind that cannot be avoided." She glances toward the tree line. "I am not being abstract."',trust:8,mood:'Tense'}
+        reply:'"The kind that cannot be avoided." She glances toward the tree line. "I am not being abstract."',trust:8,mood:'Tense'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -704,7 +716,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"I want to see what you are like when things are complicated. That tells me more than anything else."',
         reply:'"What you find when the comfortable version runs out." She is quiet. "You are willing to see that." She sounds moved by it.',trust:8,mood:'Moved'},
        {tag:'Honesty',text:'"I stay because I do not want to leave. That is the whole reason."',
-        reply:'"Simple." Her voice softens. "I did not expect simple from you. I think I prefer it."',trust:8,mood:'Warm'}
+        reply:'"Simple." Her voice softens. "I did not expect simple from you. I think I prefer it."',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 3 */
@@ -720,7 +733,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Strategy',text:'"Because you have assessed the situation and determined it is sound."',
         reply:'"Or because it is not." She looks at you. "Some things you do not do because they are sound. They are simply necessary."',trust:16,mood:'Direct'},
        {tag:'Honesty',text:'"Because you are not as guarded with me as you were at the beginning."',
-        reply:'"True." She pauses. "Should I be concerned about that?"',trust:8,mood:'Wry'}
+        reply:'"True." She pauses. "Should I be concerned about that?"',trust:8,mood:'Wry'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'She tells you the thing she meant to say. It is significant — something that changes how you understand the situation.'},
       choices:[
@@ -729,7 +743,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Honesty',text:'"Hold it carefully, because it matters."',
         reply:'"Hold it carefully." She looks at you for a long moment. "I believe you mean that." She exhales. "Good."',trust:8,mood:'Warm'},
        {tag:'Curiosity',text:'"Ask more questions, probably. This opens ten things I did not know to wonder about."',
-        reply:'"Of course it does." She sounds amused and fond. "Ask them."',trust:8,mood:'Fond'}
+        reply:'"Of course it does." She sounds amused and fond. "Ask them."',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I am not good at this. Wanting to —" She stops. The fire flares once, briefly. "I would like to try."'},
       choices:[
@@ -738,7 +753,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"Try what? Say the whole thing."',
         reply:'She exhales. "Being — here. With someone. Without the guard." She meets your eyes. "This." And she steps closer.',trust:8,mood:'Moved'},
        {tag:'Honesty',text:'"I know. I am not either. That might be why this is working."',
-        reply:'"Two people who are not good at this." The fire dims slightly. She nods. "That is either very romantic or very impractical."',trust:8,mood:'Wry'}
+        reply:'"Two people who are not good at this." The fire dims slightly. She nods. "That is either very romantic or very impractical."',trust:8,mood:'Wry'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -766,7 +782,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"What would it have been, if there had been no summit? No politics?"',
         reply:'"The same." She says it without hesitation. "That is..." She pauses. "The answer surprised me too."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"I understand. This is a partnership with intention behind it."',
-        reply:'"Partnership." She tilts her head. "You are still using the careful words." Her voice is warm enough that it is not a criticism.',trust:8,mood:'Fond'}
+        reply:'"Partnership." She tilts her head. "You are still using the careful words." Her voice is warm enough that it is not a criticism.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'The field, the third time, is different. The fire she carries is quieter now — not performing, not contained. Just present.'},
       choices:[
@@ -775,7 +792,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"Tell me what you are afraid of first. I think that matters more."',
         reply:'"You are not going to let me avoid it, are you." She sounds half-amused, half-grateful. She tells you. It is as real as anything she has said.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"That the political situation will make the personal one impossible."',
-        reply:'"It might." She meets your eyes honestly. "We may have to decide which matters more." A beat. "I have already decided."',trust:8,mood:'Resolved'}
+        reply:'"It might." She meets your eyes honestly. "We may have to decide which matters more." A beat. "I have already decided."',trust:8,mood:'Resolved'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I came here today because I have already decided. I wanted you to know that — before anything else happens."'},
       choices:[
@@ -784,7 +802,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"What did you decide, exactly? Say it out loud."',
         reply:'"That this is worth the risk." She meets your eyes. "All of it." No hesitation.',trust:8,mood:'Direct'},
        {tag:'Strategy',text:'"I know. I have been running through what it means, and I am ready."',
-        reply:'"Ready." She almost smiles. "I did not think about it in terms of readiness. I just — knew." She looks at you.',trust:8,mood:'Fond'}
+        reply:'"Ready." She almost smiles. "I did not think about it in terms of readiness. I just — knew." She looks at you.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 2 */
@@ -800,7 +819,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"What does it mean — for you?"',
         reply:'"That I have decided not to protect this from you." A pause. "I do not decide that easily."',trust:8,mood:'Vulnerable'},
        {tag:'Strategy',text:'"I understand the weight of that. I will act accordingly."',
-        reply:'"Act accordingly." She almost laughs. "Always the strategist." But the warmth in her voice means she does not mind.',trust:8,mood:'Fond'}
+        reply:'"Act accordingly." She almost laughs. "Always the strategist." But the warmth in her voice means she does not mind.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -823,7 +843,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"Do people often use them as exits?"',
         reply:'"Everyone does, eventually." She pauses. "You have not." A look that carries more than the words.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"The exits are never worth it when the conversation matters."',
-        reply:'"Matters." She holds the word. "Yes." She says it as if it is the whole point.',trust:8,mood:'Resolved'}
+        reply:'"Matters." She holds the word. "Yes." She says it as if it is the whole point.',trust:8,mood:'Resolved'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ]},
   /* Scene 3 */
@@ -839,7 +860,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"What would you do — if you had it?"',
         reply:'"This." And she shows you — quietly, with full intention — a kiss that carries everything the right moment would have.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"We should agree on what happens after."',
-        reply:'"After." She steps back — not retreating, just pausing. "Let us get to after first." She waits.',trust:8,mood:'Wry'}
+        reply:'"After." She steps back — not retreating, just pausing. "Let us get to after first." She waits.',trust:8,mood:'Wry'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'The field is very quiet. The gold light holds.',cls:'it'},
       choices:[
@@ -848,7 +870,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"Is this what you meant? When you said you would like to try?"',
         reply:'She looks at you with the expression of someone who has stopped needing to compose themselves. "Yes. Exactly this."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"I am glad we did not overthink it."',
-        reply:'"We did overthink it." She almost laughs. "We simply did it anyway." She does not move away.',trust:8,mood:'Fond'}
+        reply:'"We did overthink it." She almost laughs. "We simply did it anyway." She does not move away.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"Stay until the mist comes back. I want to show you what the fields look like when there is no one left to perform for."'},
       choices:[
@@ -857,7 +880,8 @@ GAME_DATA.kohan = { rounds:[
        {tag:'Curiosity',text:'"How do they look?"',
         reply:'"Like this." She gestures at the whole of it — the field, the light, you. "Exactly like this."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"I will need to return by morning."',
-        reply:'"By morning." She smiles — dry, genuine. "Noted." She does not move to leave.',trust:8,mood:'Fond'}
+        reply:'"By morning." She smiles — dry, genuine. "Noted." She does not move to leave.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have nothing to say to that, really."',reply:'"Nothing to say." She turns away slightly. "Then we have reached the end of this."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -894,7 +918,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I am here to understand Vissan\'s strategic position. I serve people who need accurate information."',
         reply:'"Useful framing." He considers the word carefully. "A strategic answer. Efficient, if incomplete."',trust:8,mood:'Neutral'},
        {tag:'Honesty',text:'"I came because something in Vissan compelled me. I cannot give you a more precise answer."',
-        reply:'"Could not, or will not?" He watches you — precise, unreadable. "I will decide which before this conversation ends."',trust:0,mood:'Watchful'}
+        reply:'"Could not, or will not?" He watches you — precise, unreadable. "I will decide which before this conversation ends."',trust:0,mood:'Watchful'},
+       {tag:'Curiosity',text:'"What made you choose this particular room to work in?"',reply:'"It\'s quiet." He does not look up. "Or it was."',trust:-2,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'He leads you to a high window. Below, soldiers run drills in perfect formation — a precise, silent engine.'},
       choices:[
@@ -903,7 +928,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Discipline. A unit that drills together moves together. They would hold in a crisis."',
         reply:'Something almost imperceptible shifts in his bearing — a quarter-degree of approval. "Correct analysis. Rare for a visitor."',trust:8,mood:'Engaged'},
        {tag:'Curiosity',text:'"Skill and coordination, certainly. But also something like loneliness — they move in perfect unity, but not together."',
-        reply:'"That is remarkably poetic." His tone is unreadable. "Whether it is accurate is a separate question."',trust:0,mood:'Neutral'}
+        reply:'"That is remarkably poetic." His tone is unreadable. "Whether it is accurate is a separate question."',trust:0,mood:'Neutral'},
+       {tag:'Honesty',text:'"I will admit, I do not have a clear reason for being in this room."',reply:'"No reason." His jaw tightens. "Then you are in the wrong place."',trust:-2,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I have not invited a stranger into this palace in seven years. You are the first exception. I would like to know why I made it."'},
       choices:[
@@ -912,7 +938,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I will make sure this arrangement is worth your while. You have my word."',
         reply:'"Your word." He weighs it. "I will hold you to it." Not a threat — just a fact. He gestures you forward.',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"I did not ask to be the exception. I am glad I am."',
-        reply:'"Glad." He tests the word like a blade. "There are better things to be than glad in Vissan." But he keeps walking.',trust:0,mood:'Assessing'}
+        reply:'"Glad." He tests the word like a blade. "There are better things to be than glad in Vissan." But he keeps walking.',trust:0,mood:'Assessing'},
+       {tag:'Curiosity',text:'"What made you choose this particular room to work in?"',reply:'"It\'s quiet." He does not look up. "Or it was."',trust:-2,mood:'Flat'}
       ]}
    ]},
   {label:'Act II · The Map Room',
@@ -927,7 +954,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Consolidated earlier. Fewer border disputes if the original treaties had included stricter provisions."',
         reply:'He looks at the map with you now, not just at you. "A defensible position." A pause. "You have read military histories."',trust:8,mood:'Interested'},
        {tag:'Honesty',text:'"I would have asked more questions before acting. The map does not show what the people wanted."',
-        reply:'"The people wanted protection. The map shows whether they got it." He is not dismissive, but he does not agree.',trust:0,mood:'Neutral'}
+        reply:'"The people wanted protection. The map shows whether they got it." He is not dismissive, but he does not agree.',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"What made you choose this particular room to work in?"',reply:'"It\'s quiet." He does not look up. "Or it was."',trust:-2,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -950,7 +978,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Panic removes options. I prefer to preserve them."',
         reply:'"A soldier\'s instinct." It is the closest thing to a compliment he has offered. He returns to the map table.',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"I did not want to lose what we were building."',
-        reply:'"Building." He tests the word — it is too soft for him, perhaps. But he does not object to it.',trust:0,mood:'Neutral'}
+        reply:'"Building." He tests the word — it is too soft for him, perhaps. But he does not object to it.',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"What made you choose this particular room to work in?"',reply:'"It\'s quiet." He does not look up. "Or it was."',trust:-2,mood:'Flat'}
       ]}
    ]},
   {label:'Act III · The Verdict',
@@ -965,7 +994,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Then the useful question is: did I pass?"',
         reply:'"You are still here." He says it as if that is the whole answer. Perhaps it is.',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"I did not know I was being tested. I was simply being honest with you."',
-        reply:'"That is what made it pass." He says it simply and does not elaborate.',trust:0,mood:'Neutral'}
+        reply:'"That is what made it pass." He says it simply and does not elaborate.',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"What made you choose this particular room to work in?"',reply:'"It\'s quiet." He does not look up. "Or it was."',trust:-2,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"Why Vissan? You could have gone to a dozen other kingdoms."'},
       choices:[
@@ -974,7 +1004,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Vissan is the most strategically significant territory in the region. Understanding it seemed essential."',
         reply:'"Strategically significant." He nods. "At least you are honest about your reasoning." It sounds like approval.',trust:8,mood:'Approving'},
        {tag:'Curiosity',text:'"I wanted to understand what keeps a kingdom like this from collapsing."',
-        reply:'"Discipline," he says. "And trust in very few." He looks at you.',trust:0,mood:'Steady'}
+        reply:'"Discipline," he says. "And trust in very few." He looks at you.',trust:0,mood:'Steady'},
+       {tag:'Honesty',text:'"I will admit, I do not have a clear reason for being in this room."',reply:'"No reason." His jaw tightens. "Then you are in the wrong place."',trust:-2,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I do not often say this. But you have earned the right to return here."'},
       choices:[
@@ -983,7 +1014,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I will take that as a tactical advantage."',
         reply:'"You would." He does not smile, exactly. But something in him softens. "Come back. We have more to discuss."',trust:8,mood:'Warm'},
        {tag:'Curiosity',text:'"What would it look like — not needing to test?"',
-        reply:'"I do not know yet." He sounds like he is admitting something rare. "That is the point."',trust:0,mood:'Uncertain'}
+        reply:'"I do not know yet." He sounds like he is admitting something rare. "That is the point."',trust:0,mood:'Uncertain'},
+       {tag:'Honesty',text:'"I will admit, I do not have a clear reason for being in this room."',reply:'"No reason." His jaw tightens. "Then you are in the wrong place."',trust:-2,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -1011,7 +1043,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I came to continue what was interrupted."',
         reply:'"Interrupted." He acknowledges this. "You remember things accurately."',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"I wanted to see you again. There is not more to it than that."',
-        reply:'"There usually is." He watches you. "I will discover the rest."',trust:0,mood:'Watchful'}
+        reply:'"There usually is." He watches you. "I will discover the rest."',trust:0,mood:'Watchful'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'He invites you to sit at the study table. Dispatches and maps, open. He trusts you to see this.'},
       choices:[
@@ -1020,7 +1053,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Consistent. Reliable. Never exceeding mandate without clear reason."',
         reply:'"Correct parameters." He nods. "You speak like someone who has been trained for this."',trust:8,mood:'Approving'},
        {tag:'Honesty',text:'"Simply telling the truth, even when it is inconvenient."',
-        reply:'"Idealistic." It is not entirely an insult. "Often also correct." He does not commit.',trust:0,mood:'Neutral'}
+        reply:'"Idealistic." It is not entirely an insult. "Often also correct." He does not commit.',trust:0,mood:'Neutral'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I want your perspective on something difficult. I do not ask that often."'},
       choices:[
@@ -1029,7 +1063,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Tell me the situation and I will give you my assessment."',
         reply:'"Assessment." He almost sounds amused. "Not perspective. Assessment." He begins to describe the situation.',trust:8,mood:'Focused'},
        {tag:'Honesty',text:'"I will try. I may not have the answer you are looking for."',
-        reply:'"That is acceptable." He looks at you. "You are the first person to say that without using it as an excuse."',trust:0,mood:'Noting'}
+        reply:'"That is acceptable." He looks at you. "You are the first person to say that without using it as an excuse."',trust:0,mood:'Noting'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act II · The Test Returns',
@@ -1044,7 +1079,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Strategically. To protect rather than project."',
         reply:'"The distinction matters." He gives a single nod. "Correct instinct."',trust:8,mood:'Approving'},
        {tag:'Honesty',text:'"I am not sure. What would you want done with it?"',
-        reply:'He pauses at the directness. "An honest answer." He does not deflect it.',trust:0,mood:'Neutral'}
+        reply:'He pauses at the directness. "An honest answer." He does not deflect it.',trust:0,mood:'Neutral'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1067,7 +1103,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Because leaving would have cost more than staying."',
         reply:'"Cost more." He considers the calculation. "Correct." And he returns to where they had been.',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"Because I did not want to leave."',
-        reply:'He is quiet. "I noted that." And nothing more. But he noted it.',trust:0,mood:'Neutral'}
+        reply:'He is quiet. "I noted that." And nothing more. But he noted it.',trust:0,mood:'Neutral'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act III · The Declaration',
@@ -1082,7 +1119,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Is that a problem?"',
         reply:'"Not yet." He meets your eyes. "I am determining whether it will be."',trust:8,mood:'Direct'},
        {tag:'Honesty',text:'"I noticed. I find it — significant."',
-        reply:'"Significant." He repeats it. "Yes." Something in his bearing settles.',trust:0,mood:'Steady'}
+        reply:'"Significant." He repeats it. "Yes." Something in his bearing settles.',trust:0,mood:'Steady'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"What do you want from me — not from Vissan. From me, specifically."'},
       choices:[
@@ -1091,7 +1129,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I want an honest alliance. The kind that functions under pressure."',
         reply:'"An honest alliance." He looks at you steadily. "I can offer that. It is not what I expected you to ask for."',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"I want to be someone you can say true things to."',
-        reply:'"You already are." He says it simply. "That is what this has been."',trust:0,mood:'Steady'}
+        reply:'"You already are." He says it simply. "That is what this has been."',trust:0,mood:'Steady'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"I am going to say something plainly. I do not often speak plainly about personal matters." A long pause. "I want you here. Not as a guest. As something else."'},
       choices:[
@@ -1100,7 +1139,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"I understand what that requires. You have my word."',
         reply:'"Your word." He gives it full weight. His hand remains. "Accepted."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I am already here. I have been."',
-        reply:'"I know." He is still. "I needed to say it explicitly anyway." But the hand does not extend.',trust:0,mood:'Settled'}
+        reply:'"I know." He is still. "I needed to say it explicitly anyway." But the hand does not extend.',trust:0,mood:'Settled'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -1127,7 +1167,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"I am here. Say it."',
         reply:'"I know you are." He meets your eyes. "That is part of why I can." He pauses. Then: "I have not wanted something for myself in a very long time."',trust:8,mood:'Vulnerable'},
        {tag:'Strategy',text:'"Take your time. I am not going anywhere."',
-        reply:'"I know that too." He is quiet. Then he says it — simply, without armor: "I am glad you came back."',trust:8,mood:'Warm'}
+        reply:'"I know that too." He is quiet. Then he says it — simply, without armor: "I am glad you came back."',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'He pours two cups again. Same ritual. Different room inside it.'},
       choices:[
@@ -1136,7 +1177,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"I am glad you told me."',
         reply:'"I thought about not." He hands you the cup. "I decided the cost of not saying it was higher."',trust:8,mood:'Direct'},
        {tag:'Strategy',text:'"It matters that you can distinguish between the two."',
-        reply:'"Yes." He sounds like someone confirming a calculation. "It does."',trust:8,mood:'Steady'}
+        reply:'"Yes." He sounds like someone confirming a calculation. "It does."',trust:8,mood:'Steady'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"You have seen me at my worst and you are still here. What does that tell you?"'},
       choices:[
@@ -1145,7 +1187,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"That I made the right decision, every time I came back."',
         reply:'"Every time." He is very still. "I counted." He does not say how many times. He does not need to.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"That I have good intelligence on who you actually are."',
-        reply:'"Good intelligence." The corner of his mouth moves. "If that is what you want to call it." He does not object.',trust:8,mood:'Fond'}
+        reply:'"Good intelligence." The corner of his mouth moves. "If that is what you want to call it." He does not object.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act II · The Final Obstacle',
@@ -1160,7 +1203,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Strategy',text:'"Tell me the parameters and I will give you an honest analysis."',
         reply:'"Parameters." He almost smiles. "You speak my language." He lays out the situation with the precision of a man who trusts you to handle it.',trust:8,mood:'Direct'},
        {tag:'Honesty',text:'"Whatever you decide, I am with you in it."',
-        reply:'He is very still. "That is..." He pauses. "I have never had that said to me and believed it." A beat. "I believe it now."',trust:8,mood:'Moved'}
+        reply:'He is very still. "That is..." He pauses. "I have never had that said to me and believed it." A beat. "I believe it now."',trust:8,mood:'Moved'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1183,7 +1227,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"Then don\'t. Not yet. We have an hour."',
         reply:'He is quiet for a moment. Then he nods. "An hour." He sits back down.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"Use the time well. We will finish this afterward."',
-        reply:'"Afterward." He repeats it. "Yes." Something decided in his expression.',trust:8,mood:'Resolved'}
+        reply:'"Afterward." He repeats it. "Yes." Something decided in his expression.',trust:8,mood:'Resolved'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act III · The Kiss',
@@ -1198,7 +1243,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"I know. You do not need to explain."',
         reply:'"Good." He says it quietly. And steps forward.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"We can figure out the rest together."',
-        reply:'Something like surprise moves through his expression — and then something else. "Together." He steps forward.',trust:8,mood:'Warm'}
+        reply:'Something like surprise moves through his expression — and then something else. "Together." He steps forward.',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'He does not say anything after. He does not need to.'},
       choices:[
@@ -1207,7 +1253,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Honesty',text:'"I am glad you did not overthink it."',
         reply:'"I did overthink it." His voice is dry. "And then I did it anyway." The closest he has come to admitting something is funny.',trust:8,mood:'Fond'},
        {tag:'Strategy',text:'"The council is going to notice a change in you."',
-        reply:'"Let them." He sounds like a man who has decided something final. "Let them notice."',trust:8,mood:'Resolved'}
+        reply:'"Let them." He sounds like a man who has decided something final. "Let them notice."',trust:8,mood:'Resolved'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"Stay tonight. Not as a guest. Not as a political arrangement. Stay because you want to."'},
       choices:[
@@ -1216,7 +1263,8 @@ GAME_DATA.andam = { rounds:[
        {tag:'Curiosity',text:'"What does tonight look like, for you?"',
         reply:'"Like this." He holds your gaze. "Exactly like this." And he does not look away.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"I will need to send word that I am delayed."',
-        reply:'"I will have someone handle it." He says it with the ease of a man for whom logistics are simple. "Stay."',trust:8,mood:'Fond'}
+        reply:'"I will have someone handle it." He says it with the ease of a man for whom logistics are simple. "Stay."',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I have no particular view on the matter."',reply:'He sets the map down. "Then I have no particular use for this conversation."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -1253,7 +1301,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I tend to watch how a room arranges itself before choosing my position in it."',
         reply:'"Good habit." A small smile. "I invented that habit. I am pleased to see it in practice."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I did not want to be inauthentic with someone who would see through it immediately."',
-        reply:'"Correct instinct." She tilts her head. "I appreciate efficiency even when it is flattery. Was that flattery?"',trust:0,mood:'Neutral'}
+        reply:'"Correct instinct." She tilts her head. "I appreciate efficiency even when it is flattery. Was that flattery?"',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'narrator',text:'She guides you smoothly to a quieter corner — managing your movement without you noticing until it is done.'},
       choices:[
@@ -1262,7 +1311,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I think Vissan is one of the few places that does not care what outsiders think — and that is exactly why it interests me."',
         reply:'"Excellent." She sounds genuinely pleased. "You have learned the first lesson already." Her attention is entirely on you now.',trust:8,mood:'Engaged'},
        {tag:'Honesty',text:'"Conflicted. The power here is real, but so is the cost of it."',
-        reply:'"Conflicted." She considers. "Honest, but not particularly useful. Still — I appreciate the direct answer."',trust:0,mood:'Neutral'}
+        reply:'"Conflicted." She considers. "Honest, but not particularly useful. Still — I appreciate the direct answer."',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'narrator',text:'A black cat slips beneath a nearby curtain, pauses to observe you, then disappears. Catarina does not look at it. But she knows it is there.'},
       choices:[
@@ -1271,7 +1321,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"Whatever you decide is worth offering. I am patient."',
         reply:'"Patient." She turns the word over. "Do you know how few people have the discipline to be patient here?" She looks at you differently.',trust:8,mood:'Warm'},
        {tag:'Curiosity',text:'"I would want to understand you — actually understand you, not just the role you play."',
-        reply:'"Dangerous answer." But she is smiling. "Most people would not attempt it. I am not sure whether to be charmed or concerned."',trust:0,mood:'Assessing'}
+        reply:'"Dangerous answer." But she is smiling. "Most people would not attempt it. I am not sure whether to be charmed or concerned."',trust:0,mood:'Assessing'},
+       {tag:'Honesty',text:'"Honestly? I am not entirely certain why I came this way."',reply:'"Honestly." She tilts her head. "A brave word. Not always a useful one." She waits.',trust:-2,mood:'Guarded'}
       ]}
    ]},
   {label:'Act II · The Terrace',
@@ -1286,7 +1337,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"Something that does not require me to define it in advance. I prefer to see what form it takes."',
         reply:'"Adaptive." She considers. "That can be strength or evasion. Useful either way, if you know which one you are doing."',trust:8,mood:'Considering'},
        {tag:'Honesty',text:'"On the genuine thing, whatever that is. Without pretense."',
-        reply:'"Without pretense." She smiles carefully. "A lovely idea. Let me know how it goes."',trust:0,mood:'Amused'}
+        reply:'"Without pretense." She smiles carefully. "A lovely idea. Let me know how it goes."',trust:0,mood:'Amused'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1300,7 +1352,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'You step back with perfect neutrality, giving Catarina the room to handle it.',
         reply:'"Good instinct. You did not compete. That is rare." She returns her full attention to you.',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I am sorry if our being here is inconvenient," you say to the visitor.',
-        reply:'Catarina blinks — just once. Afterward she is gracious, but something in her assessment of you has recalibrated.',trust:-14,mood:'Cooler'}
+        reply:'Catarina blinks — just once. Afterward she is gracious, but something in her assessment of you has recalibrated.',trust:-14,mood:'Cooler'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"You read that correctly. I notice when people read the room correctly." She pauses. "What did you make of it?"'},
       choices:[
@@ -1309,7 +1362,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I simply followed your lead."',
         reply:'"Modest or strategic?" She studies you. "I suspect both. I do not mind either."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I did not want to make it harder for you."',
-        reply:'"Thoughtful." She says it genuinely. "Not the skill I expected. But not unwelcome."',trust:0,mood:'Neutral'}
+        reply:'"Thoughtful." She says it genuinely. "Not the skill I expected. But not unwelcome."',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]}
    ]},
   {label:'Act III · The Private Room',
@@ -1324,7 +1378,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I think that is information I will keep for now."',
         reply:'"And I think that is the correct answer." She leans back. "Now I am curious about what it is."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I find this place more compelling than I expected, and I am not entirely comfortable with that."',
-        reply:'"Discomfort means something is real." She sounds approving. "That is more self-awareness than most manage."',trust:0,mood:'Neutral'}
+        reply:'"Discomfort means something is real." She sounds approving. "That is more self-awareness than most manage."',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'narrator',text:'The black cat reappears from beneath a chair and sits precisely between you both, watching with unusual attention.'},
       choices:[
@@ -1333,7 +1388,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"That depends on what Vissan decides to show me."',
         reply:'"Good." She glances at the cat briefly — a private message. "The ones who wait to see are usually more interesting."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I came for the knowledge. I did not expect to find other reasons to stay."',
-        reply:'"Other reasons." Her voice shifts — careful. "What kind of other reasons?"',trust:0,mood:'Probing'}
+        reply:'"Other reasons." Her voice shifts — careful. "What kind of other reasons?"',trust:0,mood:'Probing'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"I would like to see you again. Not at a reception. Somewhere without an audience."'},
       choices:[
@@ -1342,7 +1398,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I would need to consult my schedule." (You have no schedule.)',
         reply:'She laughs — quick and unguarded. "You are learning." A pause. "Tomorrow. I will find you."',trust:8,mood:'Delighted'},
        {tag:'Honesty',text:'"I would very much like that. But I want to know your intentions first."',
-        reply:'"My intentions are my own until I decide otherwise." She smiles, but the warmth recedes slightly. "That is an unusual condition for an invitation."',trust:0,mood:'Guarded'}
+        reply:'"My intentions are my own until I decide otherwise." She smiles, but the warmth recedes slightly. "That is an unusual condition for an invitation."',trust:0,mood:'Guarded'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]}
    ],
    winRes:{
@@ -1370,7 +1427,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Strategy',text:'"At the time, yes. The situation has become clearer since."',
         reply:'"Clearer how?" She waits, genuinely curious.',trust:8,mood:'Interested'},
        {tag:'Deflection',text:'"Do most people not mean what they say here?"',
-        reply:'"Not usually, no." She smiles. "It is a skill, not a failing." But something in her expression suggests she finds it fatiguing.',trust:8,mood:'Wry'}
+        reply:'"Not usually, no." She smiles. "It is a skill, not a failing." But something in her expression suggests she finds it fatiguing.',trust:8,mood:'Wry'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'narrator',text:'She leads you deeper into the garden, to a section she has cultivated herself. It is the only truly unguarded thing about her.'},
       choices:[
@@ -1379,7 +1437,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Strategy',text:'"What would it take for you to trust someone with something like this consistently?"',
         reply:'"Someone who did not need to ask." She looks at you. "Someone who simply understood it was already trusted."',trust:8,mood:'Direct'},
        {tag:'Curiosity',text:'"How long have you kept this hidden?"',
-        reply:'"Since I was twelve." She pauses. "No one has asked me that." She sounds neither pleased nor displeased — just surprised.',trust:8,mood:'Moved'}
+        reply:'"Since I was twelve." She pauses. "No one has asked me that." She sounds neither pleased nor displeased — just surprised.',trust:8,mood:'Moved'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"What would you do if I told you something that complicated what you thought about me?"'},
       choices:[
@@ -1388,7 +1447,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'"I would ask you why you were telling me."',
         reply:'"Good question." She considers. "I would be telling you because it matters that you know."',trust:8,mood:'Considering'},
        {tag:'Strategy',text:'"I would recalibrate. Most information is an opportunity."',
-        reply:'"An opportunity." She tilts her head. "That is one way to hold it." Not entirely approving.',trust:0,mood:'Neutral'}
+        reply:'"An opportunity." She tilts her head. "That is one way to hold it." Not entirely approving.',trust:0,mood:'Neutral'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]}
    ]},
   {label:'Act II · The Return',
@@ -1403,7 +1463,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Strategy',text:'"What determines who is on it?"',
         reply:'"Whether they would do anything with it that I would not sanction." A pause. "You would not."',trust:8,mood:'Considering'},
        {tag:'Deflection',text:'"I imagine the list is where it needs to be."',
-        reply:'"I imagine so too." But she is watching you with the attention of someone deciding whether to extend it.',trust:8,mood:'Assessing'}
+        reply:'"I imagine so too." But she is watching you with the attention of someone deciding whether to extend it.',trust:8,mood:'Assessing'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1417,7 +1478,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Deflection',text:'You step aside with elegant neutrality, giving her room to handle it.',
         reply:'"Good instinct," she tells you afterward. "You made it easier." She returns her full attention to you.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'You offer to help the visitor instead.',
-        reply:'Catarina handles the interruption herself, efficiently. When she returns, she is composed. "Thoughtful," she says. But the direction of the conversation has shifted.',trust:-14,mood:'Cooler'}
+        reply:'Catarina handles the interruption herself, efficiently. When she returns, she is composed. "Thoughtful," she says. But the direction of the conversation has shifted.',trust:-14,mood:'Cooler'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"The cat that follows me — it is not a pet. You may have suspected. I am confirming it."'},
       choices:[
@@ -1426,7 +1488,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"I wondered. What does it feel like — the shift?"',
         reply:'"Like remembering a second language." She considers. "And then speaking it." She looks at you differently now.',trust:8,mood:'Warm'},
        {tag:'Deflection',text:'"I appreciate you telling me."',
-        reply:'"I needed to see how you responded before I could tell you anything else." She studies your face. "This is a good response."',trust:8,mood:'Satisfied'}
+        reply:'"I needed to see how you responded before I could tell you anything else." She studies your face. "This is a good response."',trust:8,mood:'Satisfied'},
+       {tag:'Strategy',text:'"I thought it might be advantageous to introduce myself to you specifically."',reply:'"Advantageous." She repeats it. "How refreshingly transactional."',trust:-2,mood:'Cool'}
       ]}
    ]},
   {label:'Act III · What She Keeps',
@@ -1441,7 +1504,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"I have been wondering. How much of what I see is the performance?"',
         reply:'"Less than it used to be." She looks at you and then, slowly, permits herself to shift — a flash of black fur, a blink, back to herself. "That is not something I show by choice."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"That would be useful — knowing the real architecture of who you are."',
-        reply:'"Useful." She withdraws — not dramatically, but clearly. "I am not an architecture you map." She collects herself.',trust:0,mood:'Cooler'}
+        reply:'"Useful." She withdraws — not dramatically, but clearly. "I am not an architecture you map." She collects herself.',trust:0,mood:'Cooler'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'The shift, when she allowed it, was brief. But it was real. Something has been given.'},
       choices:[
@@ -1450,7 +1514,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"What made you decide to?"',
         reply:'"I decided a while ago." She says it as if she is discovering this as she speaks. "I was waiting to see if the right moment existed."',trust:8,mood:'Fond'},
        {tag:'Deflection',text:'"I will keep it the same way I keep everything you have given me."',
-        reply:'"I know." She says it with certainty. "That is not why I told you." A pause. "I told you because I wanted you to know."',trust:8,mood:'Moved'}
+        reply:'"I know." She says it with certainty. "That is not why I told you." A pause. "I told you because I wanted you to know."',trust:8,mood:'Moved'},
+       {tag:'Strategy',text:'"I thought it might be advantageous to introduce myself to you specifically."',reply:'"Advantageous." She repeats it. "How refreshingly transactional."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"I have decided something. I want you to know what it is before I act on it."'},
       choices:[
@@ -1459,7 +1524,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Honesty',text:'"I already know. And I want the same."',
         reply:'"Good." She crosses the space between you.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"What are the terms?"',
-        reply:'"There are no terms." Her expression cools slightly. "That is not how this works." She does not close the distance.',trust:0,mood:'Cooler'}
+        reply:'"There are no terms." Her expression cools slightly. "That is not how this works." She does not close the distance.',trust:0,mood:'Cooler'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -1487,7 +1553,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Honesty',text:'"I have been thinking about it too."',
         reply:'"And?" She waits. No performance. Just the question.',trust:8,mood:'Direct'},
        {tag:'Strategy',text:'"Take your time. I am listening."',
-        reply:'"I always take my time." But she looks at you — really looks. "I have been preparing this for two weeks."',trust:8,mood:'Fond'}
+        reply:'"I always take my time." But she looks at you — really looks. "I have been preparing this for two weeks."',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'The black cat — her other self — curls at your feet without being invited. A different kind of trust.'},
       choices:[
@@ -1496,7 +1563,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Honesty',text:'"I like this. All of it — the garden, the cat, you. The real version."',
         reply:'"The real version." She smiles — rare, unguarded, not performed. "Good. You are one of three people who has seen it."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"It means you trust me enough not to perform. That is significant."',
-        reply:'"It is significant." She agrees. "I am glad you understand that without needing it explained."',trust:8,mood:'Pleased'}
+        reply:'"It is significant." She agrees. "I am glad you understand that without needing it explained."',trust:8,mood:'Pleased'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"What I need you to know is that loyalty to me is not simple. I am complicated. I will protect you and challenge you and sometimes make things difficult. Is that something you want?"'},
       choices:[
@@ -1505,7 +1573,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"I want to know — what is the difficult part? Be specific."',
         reply:'"I do not forgive easily. I do not forget anything. And I will always know when something is wrong with you before you do." A beat. "Still?"',trust:8,mood:'Direct'},
        {tag:'Strategy',text:'"Complicated is fine. I need to know the rules."',
-        reply:'"There are two rules. Loyalty. And honesty." She meets your eyes. "Can you do that?"',trust:8,mood:'Steady'}
+        reply:'"There are two rules. Loyalty. And honesty." She meets your eyes. "Can you do that?"',trust:8,mood:'Steady'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act II · The Last Test',
@@ -1520,7 +1589,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Strategy',text:'"Tell me what the choice is, and I will give you an honest answer."',
         reply:'"Good." She tells you. It is more complicated than you expected. "Now. Where do you stand?"',trust:8,mood:'Direct'},
        {tag:'Curiosity',text:'"What would you do if I chose the wrong side?"',
-        reply:'"I would be very disappointed." She says it simply. "And then I would find a way to get you back anyway." A pause. "So do not choose the wrong side."',trust:8,mood:'Fond'}
+        reply:'"I would be very disappointed." She says it simply. "And then I would find a way to get you back anyway." A pause. "So do not choose the wrong side."',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1534,7 +1604,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Honesty',text:'"We will be there." You say it naturally, as if it has always been we.',
         reply:'She notices the \'we\'. Something in her expression — just for a moment — is entirely unguarded.',trust:8,mood:'Moved'},
        {tag:'Deflection',text:'You give her the room to handle it without involving you.',
-        reply:'She handles it efficiently. When she returns: "Thank you for not making it complicated." But the particular quality of the moment before is harder to recover.',trust:-14,mood:'Settled'}
+        reply:'She handles it efficiently. When she returns: "Thank you for not making it complicated." But the particular quality of the moment before is harder to recover.',trust:-14,mood:'Settled'},
+       {tag:'Curiosity',text:'"I was wondering — what does a princess actually do all day?"',reply:'A carefully contained pause. "Not this conversation," she says, pleasantly. "Next question."',trust:-2,mood:'Cool'}
       ]},
      {prompt:{who:'interest',text:'"You said \'together.\' That was not a small word, in this court."'},
       choices:[
@@ -1543,7 +1614,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"Is it a problem that I said it?"',
         reply:'"No." She is certain. "It is the opposite of a problem." She does not elaborate. But she holds your gaze.',trust:8,mood:'Direct'},
        {tag:'Strategy',text:'"It seemed accurate."',
-        reply:'"It was." She almost smiles. "Entirely accurate." She looks like someone who has made a final decision.',trust:8,mood:'Resolved'}
+        reply:'"It was." She almost smiles. "Entirely accurate." She looks like someone who has made a final decision.',trust:8,mood:'Resolved'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]}
    ]},
   {label:'Act III · The Kiss',
@@ -1558,7 +1630,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Honesty',text:'"So have I."',
         reply:'"Have you." She looks at you with something that is not a question. She closes the distance.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"Is the calculation finished?"',
-        reply:'"Yes." She takes one step forward. "I wanted you to know it was deliberate." And she kisses you.',trust:8,mood:'Warm'}
+        reply:'"Yes." She takes one step forward. "I wanted you to know it was deliberate." And she kisses you.',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'narrator',text:'The garden is very still. The last of the daylight holds.',cls:'it'},
       choices:[
@@ -1567,7 +1640,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"Is this what the calculation looks like when it is finished?"',
         reply:'"No." She is quiet. "This is what it looks like when it stops being a calculation." She does not move away.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"We will need to decide how to handle this in court."',
-        reply:'"Later." She says it with the authority of someone who has decided. "Much later."',trust:8,mood:'Fond'}
+        reply:'"Later." She says it with the authority of someone who has decided. "Much later."',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]},
      {prompt:{who:'interest',text:'"Stay for dinner. Not as a guest of the court. As mine. I want to see what that looks like."'},
       choices:[
@@ -1576,7 +1650,8 @@ GAME_DATA.catarina = { rounds:[
        {tag:'Curiosity',text:'"What does \'mine\' mean, in court terms?"',
         reply:'"It means exactly what it sounds like." She looks at you steadily. "And it means the cat likes you. Which is the more important metric."',trust:8,mood:'Fond'},
        {tag:'Strategy',text:'"We should discuss how to frame this for the court."',
-        reply:'"We will." She looks at you with fond exasperation. "After dinner." She does not let go of your hand.',trust:8,mood:'Amused'}
+        reply:'"We will." She looks at you with fond exasperation. "After dinner." She does not let go of your hand.',trust:8,mood:'Amused'},
+       {tag:'Deflection',text:'"I suppose I have no strong opinion either way."',reply:'She smiles, but it doesn\'t reach her eyes. "How diplomatic. And how disappointing."',trust:-4,mood:'Flat'}
       ]}
    ],
    winRes:{
@@ -1612,7 +1687,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I noticed the maps showed the forest stopping here — but it clearly continues. I wanted to see why."',
         reply:'"The maps are..." He pauses. "Deliberately incomplete." He looks at you with something new in his expression. "You noticed."',trust:8,mood:'Interested'},
        {tag:'Strategy',text:'"I was told this area was restricted. That generally means something worth finding."',
-        reply:'"Restricted." He repeats it carefully. "Is that how you approach things?" Not hostile — genuinely asking.',trust:0,mood:'Uncertain'}
+        reply:'"Restricted." He repeats it carefully. "Is that how you approach things?" Not hostile — genuinely asking.',trust:0,mood:'Uncertain'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'narrator',text:'Around you, the silver leaves begin their evening shift — turning slightly, catching the moon as it rises.'},
       choices:[
@@ -1621,7 +1697,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"It does something — but I would call it an alertness, not unease. I want to know what is causing it."',
         reply:'"An alertness." He considers this. "I have been called unsettling before. That is the first time someone called it interesting."',trust:8,mood:'Amused'},
        {tag:'Deflection',text:'"I have been in stranger places."',
-        reply:'"Have you." He says it without emphasis. He seems to be deciding whether to continue the conversation.',trust:0,mood:'Neutral'}
+        reply:'"Have you." He says it without emphasis. He seems to be deciding whether to continue the conversation.',trust:0,mood:'Neutral'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"I am going to ask you something, and I would like an answer without the diplomatic version." He meets your eyes. "What do you actually think of Moon Elves?"'},
       choices:[
@@ -1630,7 +1707,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I think the stories about Moon Elves are constructed by people who found them too complicated to explain honestly. I would rather ask."',
         reply:'"Yes." He sounds quiet and certain. "Ask, then." He waits.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"I think Moon Elves are strategically underestimated. There is real power here that most kingdoms ignore."',
-        reply:'"Power." He looks away. "That is not wrong. But it is not what I was asking." He sounds mildly disappointed.',trust:0,mood:'Sad'}
+        reply:'"Power." He looks away. "That is not wrong. But it is not what I was asking." He sounds mildly disappointed.',trust:0,mood:'Sad'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]}
    ]},
   {label:'Act II · Deeper In',
@@ -1645,7 +1723,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Questions I cannot answer yet. I collect them and carry them around."',
         reply:'"I do that too." He sounds surprised to say it. "Though I am not sure how long you can carry them before they become heavy."',trust:8,mood:'Connected'},
        {tag:'Deflection',text:'"I try not to let my guard down enough for thoughts like that."',
-        reply:'"That is..." He chooses his words. "A kind of protection I recognise." He does not push.',trust:0,mood:'Neutral'}
+        reply:'"That is..." He chooses his words. "A kind of protection I recognise." He does not push.',trust:0,mood:'Neutral'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1659,7 +1738,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I do not want to stop anything necessary. But I would like to know if we can continue afterward."',
         reply:'Max answers the visitor quickly — then returns to you. "Thank you for asking, not assuming." He sounds genuinely grateful.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'You give Max space and step aside silently.',
-        reply:'The exchange is brief, but afterward Max is quieter. Something of the ease between you has been spent.',trust:-14,mood:'Uncertain'}
+        reply:'The exchange is brief, but afterward Max is quieter. Something of the ease between you has been spent.',trust:-14,mood:'Uncertain'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'interest',text:'"I am sorry about that. This forest is supposed to be private." A pause. "Thank you — for what you did."'},
       choices:[
@@ -1668,7 +1748,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What was that about? You do not have to tell me — I just noticed you seemed tense."',
         reply:'"Tense." He seems surprised you noticed. "There is... something I am not ready to explain yet. But the attention was not lost on me."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"Do not apologise. It was handled. Let us continue."',
-        reply:'"Let us continue." He repeats it. Something in the way he says it — deciding if the phrase is a kindness or an evasion.',trust:0,mood:'Uncertain'}
+        reply:'"Let us continue." He repeats it. Something in the way he says it — deciding if the phrase is a kindness or an evasion.',trust:0,mood:'Uncertain'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]}
    ]},
   {label:'Act III · The Moon Clearing',
@@ -1684,7 +1765,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Why did you? Bring me here, I mean."',
         reply:'"I am not certain." He sounds like he is discovering this as he says it. "That is actually why. Because I do not know, and I wanted to find out."',trust:8,mood:'Warm'},
        {tag:'Deflection',text:'"I will not say anything about this to anyone."',
-        reply:'"I know." He pauses. "That was not my concern." He looks at you carefully. "What is your concern about tonight?"',trust:0,mood:'Neutral'}
+        reply:'"I know." He pauses. "That was not my concern." He looks at you carefully. "What is your concern about tonight?"',trust:0,mood:'Neutral'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'narrator',text:'The bell-in-leaves sound grows louder and then softer, as if the forest is breathing.'},
       choices:[
@@ -1693,7 +1775,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I have wanted to ask. But some things need to be offered, not asked for."',
         reply:'"Yes." He sounds like someone confirming something he had suspected. "Exactly that." He turns toward you more fully.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"I figured the right time would come. This seems like it might be it."',
-        reply:'"The right time." He considers whether he agrees. "Perhaps." He does not offer it yet.',trust:0,mood:'Uncertain'}
+        reply:'"The right time." He considers whether he agrees. "Perhaps." He does not offer it yet.',trust:0,mood:'Uncertain'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'interest',text:'"I want to meet you again — outside of the forest. Somewhere neither of us can explain well to anyone else. I want to see who you are in an ordinary place."'},
       choices:[
@@ -1702,7 +1785,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I want to see who you are when the forest is not performing on your behalf."',
         reply:'He laughs quietly. "It does perform sometimes." He nods. "Tomorrow. The east waterfall. Will you come?"',trust:8,mood:'Warm'},
        {tag:'Deflection',text:'"I am not sure an ordinary place would know what to do with either of us."',
-        reply:'"Perhaps not." He almost smiles. "Come anyway." But the directness is gone — a door, slightly closed.',trust:0,mood:'Quiet'}
+        reply:'"Perhaps not." He almost smiles. "Come anyway." But the directness is gone — a door, slightly closed.',trust:0,mood:'Quiet'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]}
    ],
    winRes:{
@@ -1730,7 +1814,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What did you think about?"',
         reply:'"Whether this was a good idea." He looks at you directly. "I decided it was. I wanted you to know that."',trust:8,mood:'Direct'},
        {tag:'Honesty',text:'"I thought about you too."',
-        reply:'"Good." He says it simply. He does not make it complicated. "Good."',trust:0,mood:'Warm'}
+        reply:'"Good." He says it simply. He does not make it complicated. "Good."',trust:0,mood:'Warm'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"I come here to think. The water is better at silence than the forest." He pauses. "Do you have a place like that — somewhere quiet that belongs to you?"'},
       choices:[
@@ -1739,7 +1824,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Tell me about yours first."',
         reply:'"Mine are mostly water." He tilts his head. "Why do you ask questions the way you do?"',trust:8,mood:'Interested'},
        {tag:'Honesty',text:'"Not one that I have found yet. I am still looking."',
-        reply:'"Still looking." He is quiet. "I hope you find it." He means it simply and completely.',trust:0,mood:'Gentle'}
+        reply:'"Still looking." He is quiet. "I hope you find it." He means it simply and completely.',trust:0,mood:'Gentle'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"I want to tell you something about why I left my home. I have not told many people."'},
       choices:[
@@ -1748,7 +1834,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"I have been hoping you would. Take whatever time you need."',
         reply:'"Hoping I would." He seems surprised. "You did not push." He looks at you. "Thank you for that."',trust:8,mood:'Moved'},
        {tag:'Honesty',text:'"I would like to hear it. It must be something significant, to carry it this long."',
-        reply:'"Significant." He considers the word. "Yes. I suppose it is." He begins.',trust:0,mood:'Considering'}
+        reply:'"Significant." He considers the word. "Yes. I suppose it is." He begins.',trust:0,mood:'Considering'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]}
    ]},
   {label:'Act II · The Story',
@@ -1763,7 +1850,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What does it feel like — not being afraid of that?"',
         reply:'He considers the question genuinely. "Like this." He looks at you. "Like having somewhere to put the answer."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I am glad you are here now. Whoever you are here."',
-        reply:'"Whoever I am here." He repeats it quietly. "I think I am closer to the real one."',trust:0,mood:'Gentle'}
+        reply:'"Whoever I am here." He repeats it quietly. "I think I am closer to the real one."',trust:0,mood:'Gentle'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1777,7 +1865,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Will this take long? Can we continue after?"',
         reply:'Max handles the visitor quickly and returns. "Thank you for asking." His voice is quiet. "You did not just accept the interruption."',trust:8,mood:'Warm'},
        {tag:'Deflection',text:'You step aside and wait near the water.',
-        reply:'When he returns he is quieter. Something of what was being built between you is harder to find.',trust:-14,mood:'Uncertain'}
+        reply:'When he returns he is quieter. Something of what was being built between you is harder to find.',trust:-14,mood:'Uncertain'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"Every time something interrupts us, you are still here afterward."'},
       choices:[
@@ -1786,7 +1875,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Do people usually not be?"',
         reply:'"Usually there is a reason to leave." He is quiet. "You find reasons to stay." He says it as if he is still understanding it.',trust:8,mood:'Moved'},
        {tag:'Honesty',text:'"I do not want to be anywhere else."',
-        reply:'"I know." He says it gently. "I am beginning to believe it." He looks at the water. "That is new for me."',trust:0,mood:'Considering'}
+        reply:'"I know." He says it gently. "I am beginning to believe it." He looks at the water. "That is new for me."',trust:0,mood:'Considering'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]}
    ]},
   {label:'Act III · The First Hold',
@@ -1801,7 +1891,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What part feels unfinished?"',
         reply:'"I am not sure yet." He looks at you carefully. "I think that is the point."',trust:8,mood:'Interested'},
        {tag:'Honesty',text:'"Not strange. I have been sitting here not wanting it to end."',
-        reply:'"Neither have I." He looks at you. "That is..." He does not finish. But he looks like someone who has found the word and decided to keep it.',trust:0,mood:'Gentle'}
+        reply:'"Neither have I." He looks at you. "That is..." He does not finish. But he looks like someone who has found the word and decided to keep it.',trust:0,mood:'Gentle'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'narrator',text:'The water catches the last of the light. Neither of you has moved to leave.'},
       choices:[
@@ -1810,7 +1901,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What are you thinking right now?"',
         reply:'He is quiet for a long moment. "That I would like to stay here." He meets your eyes. "With you. For a while longer."',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I think I understand why you come here."',
-        reply:'"Do you?" He sounds genuinely curious. "Tell me."',trust:0,mood:'Interested'}
+        reply:'"Do you?" He sounds genuinely curious. "Tell me."',trust:0,mood:'Interested'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"I have a habit of going slowly. I want to be honest with you about that. But —" He reaches out, and his hand closes around yours. "I have been thinking about this since the forest."'},
       choices:[
@@ -1819,7 +1911,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Since the forest." You hold his gaze. "Me too."',
         reply:'"Good." He exhales. "I was not certain." He squeezes your hand — once, light, certain.',trust:8,mood:'Warm'},
        {tag:'Honesty',text:'"I have been thinking about it too."',
-        reply:'He nods once. "I hoped so." He does not elaborate. But his hand stays in yours.',trust:0,mood:'Gentle'}
+        reply:'He nods once. "I hoped so." He does not elaborate. But his hand stays in yours.',trust:0,mood:'Gentle'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]}
    ],
    winRes:{
@@ -1847,7 +1940,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What does the book say?"',
         reply:'"It says: I did not think anyone like this was possible." He looks at you steadily. "It says: stay." He holds your gaze.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"You have had time to think about this. So have I. We are ready."',
-        reply:'"Ready." He considers the word. "I am not sure that is quite right." He looks at you. "But I am here. And I want to be."',trust:8,mood:'Warm'}
+        reply:'"Ready." He considers the word. "I am not sure that is quite right." He looks at you. "But I am here. And I want to be."',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'narrator',text:'The forest shifts — all the silver leaves turning at once, and the bell sound fills the clearing.'},
       choices:[
@@ -1856,7 +1950,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Does the forest always do that?"',
         reply:'"Not always." He looks at the leaves, then back at you. "Only when something true is happening." He does not look away.',trust:8,mood:'Warm'},
        {tag:'Deflection',text:'"It is beautiful."',
-        reply:'"Yes." He is looking at you, not the leaves. "It is."',trust:0,mood:'Gentle'}
+        reply:'"Yes." He is looking at you, not the leaves. "It is."',trust:0,mood:'Gentle'},
+       {tag:'Strategy',text:'"I calculated that speaking with you might serve my purposes here."',reply:'A long pause. "Calculated." They seem to grow more still. "I see."',trust:-2,mood:'Withdrawn'}
       ]},
      {prompt:{who:'interest',text:'"I left my home because I was afraid. I came here because I was lost. I stayed because of you." He meets your eyes. "I want you to know that."'},
       choices:[
@@ -1865,7 +1960,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"When did you know? That it was because of me?"',
         reply:'"In the forest. The first time." He looks at you with a steadiness that is new. "I just needed time to say it."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"That means a great deal to me."',
-        reply:'"I know." He nods. "That is why I said it."',trust:8,mood:'Gentle'}
+        reply:'"I know." He nods. "That is why I said it."',trust:8,mood:'Gentle'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]}
    ]},
   {label:'Act II · One Last Interruption',
@@ -1880,7 +1976,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What would staying look like? What would that mean for you?"',
         reply:'"Something I have not had for a long time." He looks at the forest. "A home that is chosen, not inherited."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"What do you need to make that decision? What are the factors?"',
-        reply:'"You." He says it simply. "That is the main factor. The rest I can manage."',trust:8,mood:'Direct'}
+        reply:'"You." He says it simply. "That is the main factor. The rest I can manage."',trust:8,mood:'Direct'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {type:'villain',
       villainLines:{
@@ -1894,7 +1991,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Is this about the decision?" you ask Max.',
         reply:'"Possibly." He looks at the visitor. "It can wait." He addresses this to you, not them. "It can wait."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'You signal Max to handle it and move aside.',
-        reply:'He handles it quickly. When he returns, something of the particular quality of the conversation is harder to recover. He tries, gently. "Where were we?"',trust:-14,mood:'Uncertain'}
+        reply:'He handles it quickly. When he returns, something of the particular quality of the conversation is harder to recover. He tries, gently. "Where were we?"',trust:-14,mood:'Uncertain'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'interest',text:'"I am going to stay." He says it as if it is the first time he has decided it fully. "I wanted to say it out loud. To you. Before anyone else."'},
       choices:[
@@ -1903,7 +2001,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What changed? Between now and this morning?"',
         reply:'"This." He gestures — the forest, the moment, you. "All of this." He looks entirely certain.',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"Good. Then we figure out the rest together."',
-        reply:'"Together." He holds the word. "Yes." He looks as if he is still getting used to it.',trust:8,mood:'Warm'}
+        reply:'"Together." He holds the word. "Yes." He looks as if he is still getting used to it.',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]}
    ]},
   {label:'Act III · The Kiss',
@@ -1919,7 +2018,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"When did you draw this?"',
         reply:'"That night. After you left." He looks at the page, then at you. "You were thinking. You did not know I was watching."',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"You have been watching since the beginning."',
-        reply:'"Yes." He does not look apologetic. "I notice things. I always have." A pause. "I notice you."',trust:8,mood:'Warm'}
+        reply:'"Yes." He does not look apologetic. "I notice things. I always have." A pause. "I notice you."',trust:8,mood:'Warm'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'narrator',text:'He closes the book. Looks at you. The moon is very bright.',cls:'it'},
       choices:[
@@ -1928,7 +2028,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"What are you thinking?"',
         reply:'"I am thinking about how long I have been waiting to say something true." He meets your eyes. "And how it is easier than I expected."',trust:8,mood:'Warm'},
        {tag:'Strategy',text:'"We should decide what we tell people."',
-        reply:'"Later." He almost laughs. "Much, much later." He does not look away from you.',trust:8,mood:'Fond'}
+        reply:'"Later." He almost laughs. "Much, much later." He does not look away from you.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]},
      {prompt:{who:'interest',text:'"I am going to kiss you now. I have been thinking about it since the waterfall and I am done waiting."'},
       choices:[
@@ -1937,7 +2038,8 @@ GAME_DATA.max = { rounds:[
        {tag:'Curiosity',text:'"Only since the waterfall?"',
         reply:'He looks at you — and then laughs, quietly, genuinely. "Since the forest." He steps forward. "The first night." And he kisses you.',trust:8,mood:'Moved'},
        {tag:'Strategy',text:'"I thought you went slowly."',
-        reply:'"I do." He is very close. "This is slow. I have been thinking about it for three weeks." He kisses you gently.',trust:8,mood:'Fond'}
+        reply:'"I do." He is very close. "This is slow. I have been thinking about it for three weeks." He kisses you gently.',trust:8,mood:'Fond'},
+       {tag:'Deflection',text:'"I wasn\'t really thinking about it."',reply:'"Mm." They look away. "The forest notices such things."',trust:-4,mood:'Distant'}
       ]}
    ],
    winRes:{
