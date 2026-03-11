@@ -47,21 +47,24 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   color:var(--gold);font-weight:700;margin-bottom:4px;}
 .sel-header p{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;
   text-transform:uppercase;color:rgba(240,201,91,.5);}
-.avatar-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:0;flex:1;min-height:0;overflow:hidden;}
-.av-card{position:relative;overflow:hidden;cursor:pointer;border:2px solid transparent;
-  transition:border-color .2s;aspect-ratio:1/1;}
-.av-card.selected{border-color:var(--gold);}
-.av-card img{width:100%;height:100%;object-fit:cover;object-position:top center;
-  filter:brightness(.78)saturate(.85);transition:filter .3s;}
-.av-card.selected img,.av-card:hover img{filter:brightness(.9)saturate(1);}
-.av-card::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 40%,rgba(24,24,24,.88) 100%);}
-.av-card-name{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:3;
-  font-family:'Cinzel',serif;font-size:1rem;color:var(--cream);letter-spacing:.06em;}
-.av-card.selected::before{content:'YOU';position:absolute;top:8px;right:8px;z-index:5;
-  font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;color:var(--gold);
-  background:rgba(24,24,24,.88);padding:3px 7px;border:1px solid var(--gold-d);border-radius:3px;}
-.sel-cta{padding:12px 20px 36px;display:flex;justify-content:center;}
+/* ── AVATAR CAROUSEL ── */
+.avatar-carousel-wrap{flex:1;overflow:hidden;display:flex;align-items:stretch;}
+.avatar-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;gap:0;width:100%;scrollbar-width:none;padding:0 7.5vw;}
+.avatar-carousel::-webkit-scrollbar{display:none;}
+.av-slide{scroll-snap-align:center;flex:0 0 85vw;max-width:340px;display:flex;
+  flex-direction:column;align-items:center;padding:0 12px 40px;text-align:center;cursor:pointer;}
+.av-slide-name{font-family:'Cinzel Decorative',serif;font-size:clamp(1.3rem,5vw,1.8rem);
+  color:var(--gold);font-weight:700;margin-bottom:4px;}
+.av-slide-sub{font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(240,201,91,.5);margin-bottom:14px;}
+.av-slide-portrait{width:100%;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;
+  border:1.5px solid rgba(245,236,208,.25);margin-bottom:16px;transition:border-color .25s;}
+.av-slide.selected .av-slide-portrait{border-color:var(--gold);border-width:2px;}
+.av-slide-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;
+  filter:brightness(.82)saturate(.88);transition:filter .3s;}
+.av-slide.selected .av-slide-portrait img,.av-slide:hover .av-slide-portrait img{filter:brightness(.93)saturate(1);}
+.av-slide-bio{font-size:0.95rem;line-height:1.72;color:var(--cream-d);margin-bottom:20px;flex:1;}
 /* ── INTEREST SELECT ── */
 .int-topbar{display:flex;align-items:center;padding:14px 20px 0;flex-shrink:0;}
 .int-back{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;text-transform:uppercase;
@@ -293,9 +296,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
     <h2>Who Are You?</h2>
     <p>Step 1 · Choose Your Character</p>
   </div>
-  <div class='avatar-grid' id='avatar-grid'></div>
-  <div class='sel-cta'>
-    <button class='btn' onclick='onChoosePursue()'>CHOOSE WHO TO PURSUE →</button>
+  <div class='avatar-carousel-wrap'>
+    <div class='avatar-carousel' id='avatar-carousel'></div>
   </div>
 </section>
 
@@ -432,7 +434,7 @@ var BIO_TEXT = {
 };
 var BIO_ORDER = ['kohan','andam','catarina','max'];
 var _bioCurrent = 0;
-var _bioContext = 's-avatar';
+var _bioContext = 'interest';
 var _continue = null;
 var _lastWho = '';
 
@@ -2332,32 +2334,35 @@ function getPipIndex(scene,exIdx){return scene*3+exIdx;}
    SCREEN BUILDERS
 ═══════════════════════════════════════════════ */
 
-/* Avatar grid (2×2) */
+/* Avatar carousel */
 function buildAvatarGrid(){
-  var grid=document.getElementById('avatar-grid');
-  grid.innerHTML='';
+  var carousel=document.getElementById('avatar-carousel');
+  carousel.innerHTML='';
   ['kohan','andam','catarina','max'].forEach(function(k){
     var ch=CHARS[k];
-    var div=document.createElement('div');
-    div.className='av-card'+(G.player===k?' selected':'');
-    div.dataset.av=k;
-    div.innerHTML='<img src="'+IMG[k]+'" alt="'+ch.name+'"><div class="av-card-name">'+ch.name+'</div>';
-    div.onclick=function(){openBioFromAvatar(k);};
-    grid.appendChild(div);
+    var slide=document.createElement('div');
+    slide.className='av-slide'+(G.player===k?' selected':'');
+    slide.dataset.av=k;
+    slide.innerHTML=
+      '<div class="av-slide-name" style="color:'+ch.color+'">'+ch.name+'</div>'+
+      '<div class="av-slide-sub">'+ch.sub+'</div>'+
+      '<div class="av-slide-portrait"><img src="'+IMG[k]+'" alt="'+ch.name+'"></div>'+
+      '<div class="av-slide-bio">'+BIO_TEXT[k]+'</div>'+
+      '<button class="btn" onclick="onPlayAs(\''+k+'\')">PLAY AS '+ch.name.toUpperCase()+'</button>';
+    carousel.appendChild(slide);
   });
-  /* hero image */
   document.getElementById('img-land').src=BG.world;
 }
 
 function selectAvatar(key){
   G.player=key;
-  document.querySelectorAll('.av-card').forEach(function(c){c.classList.remove('selected');});
+  document.querySelectorAll('.av-slide').forEach(function(c){c.classList.remove('selected');});
   var el=document.querySelector('[data-av="'+key+'"]');
   if(el)el.classList.add('selected');
 }
 
-function onChoosePursue(){
-  if(!G.player){alert('Choose your character first.');return;}
+function onPlayAs(key){
+  selectAvatar(key);
   buildInterestCards();
   goTo('s-interest');
 }
@@ -2397,11 +2402,6 @@ function selectInterest(key){
 }
 
 /* BIO screen */
-function openBioFromAvatar(key){
-  _bioContext='avatar';
-  showBio(key);
-  goTo('s-bio');
-}
 function openBioFromInterest(key){
   _bioContext='interest';
   showBio(key);
@@ -2409,10 +2409,7 @@ function openBioFromInterest(key){
 }
 
 function getBioOrder(){
-  if(_bioContext==='interest'){
-    return BIO_ORDER.filter(function(k){return k!==G.player;});
-  }
-  return BIO_ORDER;
+  return BIO_ORDER.filter(function(k){return k!==G.player;});
 }
 
 function showBio(key){
@@ -2425,13 +2422,9 @@ function showBio(key){
   document.getElementById('bio-char-name').style.color=ch.color;
   document.getElementById('bio-char-sub').textContent=ch.sub;
   document.getElementById('bio-desc-p').textContent=BIO_TEXT[key];
-  var btnLbl=_bioContext==='interest'?'PURSUE '+ch.name.toUpperCase():'PLAY AS '+ch.name.toUpperCase();
   var btn=document.getElementById('bio-play-btn');
-  btn.textContent=btnLbl;
-  btn.onclick=function(){
-    if(_bioContext==='interest'){selectInterest(key);goTo('s-interest');}
-    else{selectAvatar(key);goTo('s-avatar');}
-  };
+  btn.textContent='PURSUE '+ch.name.toUpperCase();
+  btn.onclick=function(){selectInterest(key);goTo('s-interest');};
   var prev=order[(_bioCurrent-1+order.length)%order.length];
   var next=order[(_bioCurrent+1)%order.length];
   document.getElementById('bio-prev-name').textContent=CHARS[prev].name.toUpperCase();
