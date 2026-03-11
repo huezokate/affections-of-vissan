@@ -28,10 +28,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .btn:hover,.btn:active{background:rgba(245,236,208,.07);border-color:var(--gold);}
 .btn:disabled{opacity:.38;pointer-events:none;}
 /* ── LANDING ── */
-#s-land{overflow-y:auto;}
-.land-title{text-align:center;padding:28px 20px 0;}
+#s-land{overflow-y:hidden;display:flex;flex-direction:column;}
+.land-title{text-align:center;padding:28px 20px 0;flex-shrink:0;}
 .land-title h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2rem,9vw,2.8rem);
   color:var(--gold);font-weight:700;line-height:1.15;letter-spacing:.06em;text-transform:uppercase;}
+.land-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.land-scroll::-webkit-scrollbar{display:none;}
 .land-image{width:100%;aspect-ratio:390/280;flex-shrink:0;overflow:hidden;margin-top:20px;}
 .land-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
 .land-body{padding:28px 28px 0;text-align:center;flex:1;}
@@ -39,7 +41,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   color:var(--gold);margin-bottom:20px;}
 .land-para{font-size:1.05rem;line-height:1.82;color:var(--cream-d);margin-bottom:16px;}
 .land-tagline{font-style:italic;font-size:1.05rem;color:var(--gold);margin-bottom:32px;}
-.land-cta{display:flex;justify-content:center;padding:0 28px 52px;}
+.land-cta{flex-shrink:0;display:flex;justify-content:center;padding:16px 28px 52px;background:linear-gradient(to top,var(--bg) 70%,transparent);}
 /* ── AVATAR SELECT ── */
 
 .sel-header{padding:16px 20px 14px;text-align:center;}
@@ -242,14 +244,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   text-align:left;margin-bottom:28px;}
 .true-cta{padding:0 28px 60px;display:flex;justify-content:center;}
 /* ── HOW TO PLAY ── */
-#s-howto{overflow-y:auto;}
-.howto-body{padding:36px 28px 0;text-align:center;flex:1;}
-.howto-body h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,6vw,2rem);color:var(--gold);font-weight:700;margin-bottom:28px;}
+#s-howto{overflow-y:hidden;display:flex;flex-direction:column;}
+.howto-header{padding:28px 20px 16px;text-align:center;flex-shrink:0;}
+.howto-header h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.5rem,6vw,2rem);color:var(--gold);font-weight:700;margin-bottom:0;}
+.howto-cast{display:flex;gap:0;flex-shrink:0;width:100%;overflow:hidden;}
+.howto-cast-card{flex:1;position:relative;overflow:hidden;aspect-ratio:1/1;cursor:default;}
+.howto-cast-card img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:brightness(.72)saturate(.82);}
+.howto-cast-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(24,24,24,.88) 100%);}
+.howto-cast-name{position:absolute;bottom:6px;left:0;right:0;text-align:center;z-index:3;font-family:'Cinzel',serif;font-size:0.7rem;color:var(--cream);letter-spacing:.06em;}
+.howto-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:20px 28px 0;}
+.howto-scroll::-webkit-scrollbar{display:none;}
 .howto-para{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;line-height:1.82;color:var(--cream-d);margin-bottom:16px;text-align:left;}
 .howto-para strong{color:var(--cream);}
-.howto-meter-row{display:flex;align-items:center;gap:12px;margin:20px 0;justify-content:center;}
 .howto-meter-note{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-style:italic;color:rgba(240,201,91,.7);text-align:center;margin-bottom:24px;}
-.howto-cta{padding:20px 28px 52px;display:flex;justify-content:center;}
+.howto-cta{flex-shrink:0;display:flex;justify-content:center;padding:16px 28px 52px;background:linear-gradient(to top,var(--bg) 70%,transparent);}
 /* ── RESULT SCORES ── */
 .result-scores{display:flex;justify-content:center;gap:28px;padding:14px 0 4px;}
 .result-score-block{text-align:center;}
@@ -265,20 +273,23 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 <!-- 1. LANDING -->
 <section class='screen active' id='s-land'>
   <div class='land-title'><h1>AFFECTIONS<br>OF VISSAN</h1></div>
-  <div class='land-image'><img id='img-land' src='' alt='Vissan'></div>
-  <div class='land-body'>
-    <div class='land-subtitle'>AN AI-DRIVEN VISUAL NOVEL</div>
-    <p class='land-para'>In the realm of Vissan, vampire nobility rules from obsidian towers above a kingdom that has not seen full sunlight in three centuries.</p>
-    <p class='land-para'>Below their spires, humans born with arcane gifts and elves bound by ancient oaths navigate a world where every alliance is a weapon — and every emotion, a door.</p>
-    <p class='land-tagline'>Some doors should not be opened carelessly.</p>
+  <div class='land-scroll'>
+    <div class='land-image'><img id='img-land' src='' alt='Vissan'></div>
+    <div class='land-body'>
+      <div class='land-subtitle'>AN AI-DRIVEN VISUAL NOVEL</div>
+      <p class='land-para'>In the realm of Vissan, vampire nobility rules from obsidian towers above a kingdom that has not seen full sunlight in three centuries.</p>
+      <p class='land-para'>Below their spires, humans born with arcane gifts and elves bound by ancient oaths navigate a world where every alliance is a weapon — and every emotion, a door.</p>
+      <p class='land-tagline'>Some doors should not be opened carelessly.</p>
+    </div>
   </div>
   <div class='land-cta'><button class='btn' onclick="goTo('s-howto')">ENTER VISSAN</button></div>
 </section>
 
 <!-- 1b. HOW TO PLAY -->
 <section class='screen' id='s-howto'>
-  <div class='howto-body scroll-y'>
-    <h2>HOW TO PLAY</h2>
+  <div class='howto-header'><h2>HOW TO PLAY</h2></div>
+  <div class='howto-cast' id='howto-cast'></div>
+  <div class='howto-scroll'>
     <p class='howto-para'>In Vissan, any character can become your story — or your challenge.</p>
     <p class='howto-para'>Choose who you play as. Choose who you pursue. Study them carefully: their words, their silences, their reactions.</p>
     <p class='howto-para'>Every character holds secrets. Every answer you give shapes how they see you. Choose wisely — or discover what happens when you don't.</p>
@@ -2732,7 +2743,21 @@ function fullReset(){
 /* ═══════════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════════ */
+function buildHowtoCast(){
+  var wrap=document.getElementById('howto-cast');
+  if(!wrap)return;
+  wrap.innerHTML='';
+  ['kohan','andam','catarina','max'].forEach(function(k){
+    var ch=CHARS[k];
+    var div=document.createElement('div');
+    div.className='howto-cast-card';
+    div.innerHTML='<img src="'+IMG[k]+'" alt="'+ch.name+'"><div class="howto-cast-name">'+ch.name.toUpperCase()+'</div>';
+    wrap.appendChild(div);
+  });
+}
+
 buildAvatarGrid();
+buildHowtoCast();
 
 </script>
 </body>
