@@ -111,6 +111,27 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   display:flex;flex-direction:column;align-items:center;gap:8px;}
 .int-villain-hint{font-style:italic;font-size:1rem;color:rgba(200,80,80,.55);
   text-align:center;min-height:1.2em;}
+/* ── CONFIRM ── */
+#s-confirm{display:flex;flex-direction:column;overflow:hidden;}
+.confirm-header{padding:32px 20px 20px;text-align:center;flex-shrink:0;}
+.confirm-header h2{font-family:'Cinzel Decorative',serif;font-size:clamp(1.4rem,5vw,1.9rem);
+  color:var(--gold);font-weight:700;}
+.confirm-portraits{display:flex;align-items:flex-start;justify-content:center;
+  gap:0;padding:0 16px;flex-shrink:0;}
+.confirm-card{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:160px;}
+.confirm-portrait{width:100%;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;
+  border:1.5px solid rgba(245,236,208,.25);}
+.confirm-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.confirm-name{font-family:'Cinzel Decorative',serif;font-size:1rem;font-weight:700;text-align:center;}
+.confirm-sub{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:.28em;
+  text-transform:uppercase;color:rgba(240,201,91,.5);text-align:center;}
+.confirm-divider{font-size:1.4rem;color:var(--gold);padding:60px 12px 0;flex-shrink:0;}
+.confirm-copy{flex:1;padding:24px 28px 0;text-align:center;
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;
+  line-height:1.82;color:var(--cream-d);}
+.confirm-copy strong{color:var(--gold);}
+.confirm-cta{flex-shrink:0;display:flex;justify-content:center;padding:20px 28px 52px;
+  background:linear-gradient(to top,var(--bg) 70%,transparent);}
 /* ── ENCOUNTER ── */
 #s-encounter{overflow:hidden;}
 .enc-portrait{width:100%;height:200px;flex-shrink:0;position:relative;overflow:hidden;}
@@ -317,7 +338,35 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   </div>
   <div class='int-footer'>
     <div class='int-villain-hint' id='int-villain-hint'></div>
-    <button class='btn' id='btn-start' disabled onclick='startEncounter()'>BEGIN THE STORY →</button>
+    <button class='btn' id='btn-pursue' disabled onclick='goToConfirm()'>PURSUE →</button>
+  </div>
+</section>
+
+<!-- CONFIRM: Player + Interest side by side -->
+<section class='screen' id='s-confirm'>
+  <div class='confirm-header'>
+    <h2>Your Story Begins</h2>
+  </div>
+  <div class='confirm-portraits'>
+    <div class='confirm-card' id='confirm-player-card'>
+      <div class='confirm-portrait'>
+        <img id='confirm-player-img' src='' alt=''>
+      </div>
+      <div class='confirm-name' id='confirm-player-name'></div>
+      <div class='confirm-sub' id='confirm-player-sub'></div>
+    </div>
+    <div class='confirm-divider'>✦</div>
+    <div class='confirm-card' id='confirm-interest-card'>
+      <div class='confirm-portrait'>
+        <img id='confirm-interest-img' src='' alt=''>
+      </div>
+      <div class='confirm-name' id='confirm-interest-name'></div>
+      <div class='confirm-sub' id='confirm-interest-sub'></div>
+    </div>
+  </div>
+  <div class='confirm-copy' id='confirm-copy'></div>
+  <div class='confirm-cta'>
+    <button class='btn' onclick='startEncounter()'>BEGIN THE STORY →</button>
   </div>
 </section>
 
@@ -2360,25 +2409,41 @@ function buildInterestCards(){
   var carousel=document.getElementById('int-carousel');
   carousel.innerHTML='';
   document.getElementById('int-villain-hint').textContent='';
-  document.getElementById('btn-start').disabled=true;
+  document.getElementById('btn-pursue').disabled=true;
+  document.getElementById('btn-pursue').textContent='PURSUE →';
   var keys=BIO_ORDER.filter(function(k){return k!==G.player;});
   keys.forEach(function(k){
     var ch=CHARS[k];
     var slide=document.createElement('div');
     slide.className='int-slide'+(G.interest===k?' selected':'');
     slide.dataset.int=k;
+    slide.onclick=(function(key){return function(){selectInterest(key);};})(k);
     slide.innerHTML=
       '<div class="int-slide-name" style="color:'+ch.color+'">'+ch.name+'</div>'+
       '<div class="int-slide-sub">'+ch.sub+'</div>'+
       '<div class="int-slide-portrait"><img src="'+IMG[k]+'" alt="'+ch.name+'"></div>'+
-      '<div class="int-slide-bio">'+BIO_TEXT[k]+'</div>'+
-      '<button class="btn" onclick="onPursue(\''+k+'\')">PURSUE '+ch.name.toUpperCase()+'</button>';
+      '<div class="int-slide-bio">'+BIO_TEXT[k]+'</div>';
     carousel.appendChild(slide);
   });
 }
 
-function onPursue(key){
-  selectInterest(key);
+function goToConfirm(){
+  if(!G.interest) return;
+  var player=CHARS[G.player];
+  var interest=CHARS[G.interest];
+  document.getElementById('confirm-player-img').src=IMG[G.player];
+  document.getElementById('confirm-player-name').textContent=player.name;
+  document.getElementById('confirm-player-name').style.color=player.color;
+  document.getElementById('confirm-player-sub').textContent=player.sub;
+  document.getElementById('confirm-interest-img').src=IMG[G.interest];
+  document.getElementById('confirm-interest-name').textContent=interest.name;
+  document.getElementById('confirm-interest-name').style.color=interest.color;
+  document.getElementById('confirm-interest-sub').textContent=interest.sub;
+  document.getElementById('confirm-copy').innerHTML=
+    'You are playing as <strong>'+player.name+'</strong>, the '+player.sub.toLowerCase()+
+    ', drawn to <strong>'+interest.name+'</strong>, the '+interest.sub.toLowerCase()+'.'+
+    '<br><br>Choose wisely. Not everyone will let you win their heart.';
+  goTo('s-confirm');
 }
 
 function selectInterest(key){
@@ -2390,7 +2455,9 @@ function selectInterest(key){
   if(el)el.classList.add('selected');
   document.getElementById('int-villain-hint').textContent=
     'One rival lurks in the shadows — their identity will be revealed.';
-  document.getElementById('btn-start').disabled=false;
+  var pursueBtn=document.getElementById('btn-pursue');
+  pursueBtn.textContent='PURSUE '+CHARS[key].name.toUpperCase()+' →';
+  pursueBtn.disabled=false;
 }
 
 /* ═══════════════════════════════════════════════
