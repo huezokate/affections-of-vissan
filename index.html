@@ -86,48 +86,29 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
   color:var(--gold);font-weight:700;margin-bottom:4px;}
 .int-header p{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.32em;
   text-transform:uppercase;color:rgba(240,201,91,.5);}
-.int-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 20px 120px;position:relative;}
-.int-scroll::-webkit-scrollbar{display:none;}
-.int-cards-wrap{position:relative;width:100%;}
-.int-card{width:200px;height:200px;border-radius:var(--r);overflow:hidden;
-  border:1.5px solid rgba(245,236,208,.35);cursor:pointer;position:absolute;transition:border-color .25s;}
-.int-card:hover,.int-card.selected{border-color:var(--gold);border-width:2px;}
-.int-card img{width:100%;height:100%;object-fit:cover;object-position:top;
-  filter:brightness(.78)saturate(.82);transition:filter .3s;}
-.int-card.selected img,.int-card:hover img{filter:brightness(.9)saturate(1);}
-.int-card::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 40%,rgba(24,24,24,.9) 100%);}
-.int-card-info{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;z-index:3;}
-.int-card-sub{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
-  text-transform:uppercase;color:rgba(240,201,91,.5);margin-bottom:2px;}
-.int-card-name{font-family:'Cinzel Decorative',serif;font-size:1rem;font-weight:700;}
-.int-card.selected::before{content:'PURSUING';position:absolute;top:8px;right:8px;z-index:5;
-  font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;color:var(--gold);
-  background:rgba(24,24,24,.9);padding:3px 7px;border:1px solid var(--gold-d);border-radius:3px;}
+.int-carousel-wrap{flex:1;overflow:hidden;display:flex;align-items:stretch;}
+.int-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;width:100%;scrollbar-width:none;padding:0 7.5vw;}
+.int-carousel::-webkit-scrollbar{display:none;}
+.int-slide{scroll-snap-align:center;flex:0 0 85vw;max-width:340px;display:flex;
+  flex-direction:column;align-items:center;padding:0 12px 16px;text-align:center;}
+.int-slide-name{font-family:'Cinzel Decorative',serif;font-size:clamp(1.3rem,5vw,1.8rem);
+  font-weight:700;margin-bottom:4px;}
+.int-slide-sub{font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(240,201,91,.5);margin-bottom:14px;}
+.int-slide-portrait{width:100%;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;
+  border:1.5px solid rgba(245,236,208,.25);margin-bottom:16px;transition:border-color .25s;}
+.int-slide.selected .int-slide-portrait{border-color:var(--gold);border-width:2px;}
+.int-slide-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;
+  filter:brightness(.82)saturate(.88);transition:filter .3s;}
+.int-slide.selected .int-slide-portrait img,
+.int-slide:hover .int-slide-portrait img{filter:brightness(.93)saturate(1);}
+.int-slide-bio{font-size:0.95rem;line-height:1.72;color:var(--cream-d);margin-bottom:16px;flex:1;}
 .int-footer{position:fixed;bottom:0;left:0;right:0;z-index:20;padding:14px 20px 40px;
   background:linear-gradient(to top,var(--bg) 60%,transparent);
   display:flex;flex-direction:column;align-items:center;gap:8px;}
 .int-villain-hint{font-style:italic;font-size:1rem;color:rgba(200,80,80,.55);
   text-align:center;min-height:1.2em;}
-/* ── BIO ── */
-#s-bio{overflow-y:auto;}
-.bio-topnav{display:flex;align-items:center;justify-content:space-between;
-  padding:16px 20px 10px;flex-shrink:0;}
-.bio-nav-btn{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.28em;text-transform:uppercase;
-  color:rgba(245,236,208,.45);background:none;border:none;cursor:pointer;
-  display:flex;align-items:center;gap:5px;min-width:80px;transition:color .2s;}
-.bio-nav-btn:hover{color:var(--cream);}
-.bio-nav-btn.right{justify-content:flex-end;}
-.bio-name-center{text-align:center;}
-.bio-char-name{display:block;font-family:'Cinzel Decorative',serif;font-size:1.4rem;font-weight:700;}
-.bio-char-sub{display:block;font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.3em;
-  text-transform:uppercase;color:rgba(240,201,91,.5);margin-top:2px;}
-.bio-portrait-wrap{padding:14px 28px 0;flex-shrink:0;}
-.bio-portrait-card{border-radius:var(--r);overflow:hidden;border:1.5px solid var(--gold);aspect-ratio:331/496;}
-.bio-portrait-card img{width:100%;height:100%;object-fit:cover;object-position:top center;}
-.bio-desc{padding:20px 28px 0;text-align:center;}
-.bio-desc p{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;line-height:1.82;color:var(--cream-d);}
-.bio-play-cta{padding:20px 28px 44px;display:flex;justify-content:center;}
 /* ── ENCOUNTER ── */
 #s-encounter{overflow:hidden;}
 .enc-portrait{width:100%;height:200px;flex-shrink:0;position:relative;overflow:hidden;}
@@ -322,33 +303,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 
 <!-- 3. INTEREST SELECT -->
 <section class='screen' id='s-interest'>
-  <div class='int-topbar'><button class='int-back' onclick="goTo('s-avatar')">← BACK</button></div>
+  <div class='int-topbar'>
+    <button class='int-back' onclick="goTo('s-avatar')">← BACK</button>
+  </div>
   <div class='int-header'>
     <h2>Who to Pursue?</h2>
     <p>Step 2 · Choose Your Love Interest</p>
   </div>
-  <div class='int-scroll'><div class='int-cards-wrap' id='int-cards-wrap'></div></div>
+  <div class='int-carousel-wrap'>
+    <div class='int-carousel' id='int-carousel'></div>
+  </div>
   <div class='int-footer'>
     <div class='int-villain-hint' id='int-villain-hint'></div>
     <button class='btn' id='btn-start' disabled onclick='startEncounter()'>BEGIN THE STORY →</button>
   </div>
-</section>
-
-<!-- 4. BIO -->
-<section class='screen' id='s-bio'>
-  <div class='bio-topnav'>
-    <button class='bio-nav-btn' onclick='bioPrev()'>← <span id='bio-prev-name'></span></button>
-    <div class='bio-name-center'>
-      <span class='bio-char-name' id='bio-char-name'></span>
-      <span class='bio-char-sub' id='bio-char-sub'></span>
-    </div>
-    <button class='bio-nav-btn right' onclick='bioNext()'><span id='bio-next-name'></span> →</button>
-  </div>
-  <div class='bio-portrait-wrap'>
-    <div class='bio-portrait-card'><img id='bio-portrait-img' src='' alt=''></div>
-  </div>
-  <div class='bio-desc'><p id='bio-desc-p'></p></div>
-  <div class='bio-play-cta'><button class='btn' id='bio-play-btn'>PLAY AS …</button></div>
 </section>
 
 <!-- 5. ENCOUNTER -->
@@ -452,8 +420,6 @@ var BIO_TEXT = {
   max:      'A displaced elf with quiet grace and concealed royalty. Max is observant, introspective, and slower to trust than he appears. Dreamer at heart, he is drawn to beauty and possibility, yet hides a deeper purpose. Win his confidence, and devotion runs deep. Ignore the signs, and you may miss who he truly is.'
 };
 var BIO_ORDER = ['kohan','andam','catarina','max'];
-var _bioCurrent = 0;
-var _bioContext = 'interest';
 var _continue = null;
 var _lastWho = '';
 
@@ -2387,71 +2353,43 @@ function onPlayAs(key){
   goTo('s-interest');
 }
 
-/* Interest cards (diagonal stacked, excludes avatar) */
+/* Interest cards (horizontal snap carousel, excludes avatar) */
 function buildInterestCards(){
-  var area=document.getElementById('int-cards-wrap');
-  area.innerHTML='';
+  var carousel=document.getElementById('int-carousel');
+  carousel.innerHTML='';
   document.getElementById('int-villain-hint').textContent='';
   document.getElementById('btn-start').disabled=true;
   var keys=BIO_ORDER.filter(function(k){return k!==G.player;});
-  var lefts=['20px','90px','160px'];
-  area.style.height=(keys.length*220+30)+'px';
-  keys.forEach(function(k,i){
+  keys.forEach(function(k){
     var ch=CHARS[k];
-    var div=document.createElement('div');
-    div.className='int-card'+(G.interest===k?' selected':'');
-    div.dataset.int=k;
-    div.style.left=lefts[i]||'20px';
-    div.style.top=(i*220)+'px';
-    div.innerHTML='<img src="'+IMG[k]+'" alt="'+ch.name+'"><div class="int-card-info">'+
-      '<div class="int-card-sub">'+ch.arch+'</div>'+
-      '<div class="int-card-name" style="color:'+ch.color+'">'+ch.name+'</div></div>';
-    div.onclick=function(){openBioFromInterest(k);};
-    area.appendChild(div);
+    var slide=document.createElement('div');
+    slide.className='int-slide'+(G.interest===k?' selected':'');
+    slide.dataset.int=k;
+    slide.innerHTML=
+      '<div class="int-slide-name" style="color:'+ch.color+'">'+ch.name+'</div>'+
+      '<div class="int-slide-sub">'+ch.sub+'</div>'+
+      '<div class="int-slide-portrait"><img src="'+IMG[k]+'" alt="'+ch.name+'"></div>'+
+      '<div class="int-slide-bio">'+BIO_TEXT[k]+'</div>'+
+      '<button class="btn" onclick="onPursue(\''+k+'\')">PURSUE '+ch.name.toUpperCase()+'</button>';
+    carousel.appendChild(slide);
   });
+}
+
+function onPursue(key){
+  selectInterest(key);
 }
 
 function selectInterest(key){
   G.interest=key;
-  document.querySelectorAll('.int-card').forEach(function(c){c.classList.remove('selected');});
+  document.querySelectorAll('.int-slide').forEach(function(c){
+    c.classList.remove('selected');
+  });
   var el=document.querySelector('[data-int="'+key+'"]');
   if(el)el.classList.add('selected');
   document.getElementById('int-villain-hint').textContent=
     'One rival lurks in the shadows — their identity will be revealed.';
   document.getElementById('btn-start').disabled=false;
 }
-
-/* BIO screen */
-function openBioFromInterest(key){
-  _bioContext='interest';
-  showBio(key);
-  goTo('s-bio');
-}
-
-function getBioOrder(){
-  return BIO_ORDER.filter(function(k){return k!==G.player;});
-}
-
-function showBio(key){
-  var order=getBioOrder();
-  _bioCurrent=order.indexOf(key);
-  if(_bioCurrent<0)_bioCurrent=0;
-  var ch=CHARS[key];
-  document.getElementById('bio-portrait-img').src=IMG[key];
-  document.getElementById('bio-char-name').textContent=ch.name;
-  document.getElementById('bio-char-name').style.color=ch.color;
-  document.getElementById('bio-char-sub').textContent=ch.sub;
-  document.getElementById('bio-desc-p').textContent=BIO_TEXT[key];
-  var btn=document.getElementById('bio-play-btn');
-  btn.textContent='PURSUE '+ch.name.toUpperCase();
-  btn.onclick=function(){selectInterest(key);goTo('s-interest');};
-  var prev=order[(_bioCurrent-1+order.length)%order.length];
-  var next=order[(_bioCurrent+1)%order.length];
-  document.getElementById('bio-prev-name').textContent=CHARS[prev].name.toUpperCase();
-  document.getElementById('bio-next-name').textContent=CHARS[next].name.toUpperCase();
-}
-function bioPrev(){var o=getBioOrder();var k=o[(_bioCurrent-1+o.length)%o.length];showBio(k);}
-function bioNext(){var o=getBioOrder();var k=o[(_bioCurrent+1)%o.length];showBio(k);}
 
 /* ═══════════════════════════════════════════════
    GAME FLOW
